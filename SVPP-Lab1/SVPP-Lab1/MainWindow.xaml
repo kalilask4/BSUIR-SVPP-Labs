@@ -7,15 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-       
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-
-
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -31,7 +28,5 @@
                 Click="btnCalc_Click"
                 >Calculate</Button>
             <TextBlock x:Name="tbResult" FontSize="30" Margin="15" Grid.Row="4" Grid.Column="1"></TextBlock>
-
-        
     </Grid>
 </Window>
