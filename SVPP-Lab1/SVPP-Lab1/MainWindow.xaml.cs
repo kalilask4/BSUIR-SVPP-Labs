@@ -24,5 +24,18 @@ namespace SVPP_Lab1
         {
             InitializeComponent();
         }
+
+        private void btnCalc_Click(object sender, RoutedEventArgs e)
+        {
+            Double x, y, z, result;
+            Double.TryParse(XValue.Text, out x);
+            Double.TryParse(YValue.Text, out y);
+            Double.TryParse(ZValue.Text, out z);
+            result = x + y + z;
+
+            tbResult.Text = $"Result  {result}";
+
+
+        }
     }
 }
