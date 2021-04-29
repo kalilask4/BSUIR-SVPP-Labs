@@ -31,7 +31,8 @@ namespace SVPP_Lab1
             Double.TryParse(XValue.Text, out x);
             Double.TryParse(YValue.Text, out y);
             Double.TryParse(ZValue.Text, out z);
-            result = x + y + z;
+
+            result = (Math.Pow((Math.Abs(Math.Cos(x) - Math.Cos(y))), (1 + (2 * (Math.Pow(Math.Sin(y), 2.0))))) * (1 + z + (Math.Pow(z, 2.0)) / 2 + (Math.Pow(z, 3.0)) / 3 + (Math.Pow(z, 4.0)) / 4));
 
             tbResult.Text = $"Result  {result}";
 
