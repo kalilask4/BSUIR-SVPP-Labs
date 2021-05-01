@@ -18,10 +18,10 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock FontSize="36" Margin="15">X=</TextBlock>
-            <TextBlock FontSize="36" Margin="15" Grid.Row="1">Y=</TextBlock>
-            <TextBlock FontSize="36" Margin="15" Grid.Row="2">Z=</TextBlock>
-            <TextBox x:Name="XValue" Grid.Row="0" Grid.Column="1" FontSize="36" Margin="15"></TextBox>
+            <TextBlock FontSize="36" Margin="20">X=</TextBlock>
+            <TextBlock FontSize="36" Margin="20" Grid.Row="1">Y=</TextBlock>
+            <TextBlock FontSize="36" Margin="20" Grid.Row="2">Z=</TextBlock>
+        <TextBox x:Name="XValue" Grid.Row="0" Grid.Column="1" FontSize="36" Margin="15"></TextBox>
             <TextBox x:Name="YValue" Grid.Row="1" Grid.Column="1" FontSize="36" Margin="15"></TextBox>
             <TextBox x:Name="ZValue" Grid.Row="2" Grid.Column="1" FontSize="36" Margin="15"></TextBox>
             <Button x:Name="btnCalc" FontSize="30" Margin="15" Grid.Row="3" Grid.Column="1"
