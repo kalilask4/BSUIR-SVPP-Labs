@@ -1,0 +1,33 @@
+﻿<Window x:Class="SVPP_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SVPP_Lab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <Grid x:Name="MainRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="174" Margin="10,52,0,0" VerticalAlignment="Top" Width="138" Grid.RowSpan="2" Grid.Column="1">
+            <HeaderedContentControl FontSize="20" Margin="10,10,0,0">F(x)</HeaderedContentControl>
+            <RadioButton FontSize="18" Margin="10,10,0,0" Content="Sin(x)"/>
+            <RadioButton FontSize="18" Margin="10,10,0,0" Content="Cos(x)"/>
+            <RadioButton FontSize="18" Margin="10,10,0,0" Content="Tg(x)"/>
+        </StackPanel>
+        <Button x:Name="btnCalculate" FontSize="20" Content="Calculate" HorizontalAlignment="Left" Margin="44,5,0,0" 
+                Grid.Row="2" VerticalAlignment="Top" Width="110" Click="btnCalculateclick"/>
+      
+  
+
+    </Grid>
+
+</Window>
