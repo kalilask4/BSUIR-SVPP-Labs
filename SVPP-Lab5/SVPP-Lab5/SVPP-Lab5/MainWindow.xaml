@@ -28,7 +28,9 @@
 
 
         <Grid x:Name="Canvas" Grid.Column="0" Background="WhiteSmoke">
-   
+            <Image Grid.Row="2" Name="canvas" Source="Image\Canvas.gif" Stretch="Fill" Opacity="1.0" 
+                   >
+            </Image>
         </Grid>
 
         <Grid  x:Name="Menu" Grid.Column="1">
@@ -48,7 +50,7 @@
 
             <Border>
                 <StackPanel Background="LemonChiffon">
-                    <Button Height="60" Width="85">
+                    <Button Height="60" Width="85" Click="BtnStrokeColor_Click">
                         <Label Opacity="0.7" FontWeight="Bold" Margin="0,0,0,30">Line color</Label>
                     </Button>
                     <Button Height="25" x:Name="BtnStrokeColor"/>
@@ -57,7 +59,7 @@
 
             <Border>
                 <StackPanel Background="LightGoldenrodYellow">
-                    <Button Height="60" Width="85">
+                    <Button Height="60" Width="85" Click="BtnBackgroundColor_Click">
                         <Label Opacity="0.7" FontWeight="Bold"  Margin="0,0,0,30">Fill color</Label>
                     </Button>
 

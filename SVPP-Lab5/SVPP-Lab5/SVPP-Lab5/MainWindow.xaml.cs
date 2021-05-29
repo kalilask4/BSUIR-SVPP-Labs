@@ -23,6 +23,7 @@ namespace SVPP_Lab5
     public partial class MainWindow : Window
     {
 
+        ColorDialog StrokeColorDialog, BackgroundColorDialog;
 
 
         public MainWindow()
@@ -31,6 +32,29 @@ namespace SVPP_Lab5
         }
 
 
+        private void BtnStrokeColor_Click(object sender, RoutedEventArgs e)
+        {
+            StrokeColorDialog = new ColorDialog();
+            StrokeColorDialog.FullOpen = true;
+            StrokeColorDialog.ShowDialog();
+
+            var Line = StrokeColorDialog.Color;
+            Color mediaColor = Color.FromRgb(Line.R, Line.G, Line.B);
+            BtnStrokeColor.Background = new SolidColorBrush(mediaColor);
+        }
+
+        private void BtnBackgroundColor_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundColorDialog = new ColorDialog();
+            BackgroundColorDialog.FullOpen = true;
+            BackgroundColorDialog.ShowDialog();
+
+            var Line = BackgroundColorDialog.Color;
+            Color mediaColor = Color.FromRgb(Line.R, Line.G, Line.B);
+            BtnBackgroundColor.Background = new SolidColorBrush(mediaColor);
+        }
+
+ 
 
     }
 }
