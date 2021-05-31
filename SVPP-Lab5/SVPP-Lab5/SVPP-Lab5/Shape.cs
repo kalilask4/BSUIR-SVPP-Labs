@@ -10,8 +10,6 @@ namespace SVPP_Lab5
 {
     class Shape
     {
-
-
         public int Widght { get; set; }
         public Brush Background { get; set; }
         public Brush Foreground { get; set; }

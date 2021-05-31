@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SVPP_Lab5"
         mc:Ignorable="d"
-        Title="WindowShape" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="WindowShape" Height="300" Width="330">
+    <StackPanel Orientation="Vertical" Background="Azure" >
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Line color " Margin="20.10" Width="80"/>
+            <ComboBox x:Name="comboBoxFore" Width="150" Margin="20, 10" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Fill color " Margin="20.10" Width="80"/>
+            <ComboBox x:Name="comboBoxBack" Width="150" Margin="20, 10" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Line Widght" Margin="20.10" Width="80"/>
+            <TextBox x:Name="textBoxWidght" Width="150" Margin="20, 10" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Ok" Margin="40 , 25" Width="80"/>
+            <Button Content="Cancel" Margin="20 , 25"  Width="80"/>
+        </StackPanel>
+
+    </StackPanel>
 </Window>

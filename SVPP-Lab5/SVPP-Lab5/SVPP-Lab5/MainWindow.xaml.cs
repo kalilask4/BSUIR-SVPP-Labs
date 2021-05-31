@@ -20,9 +20,20 @@ namespace SVPP_Lab5
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            WindowShape windowShape = new WindowShape();
+            if (windowShape.ShowDialog() == true)
+                MessageBox.Show("OK");
         }
     }
 }

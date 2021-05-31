@@ -19,9 +19,18 @@ namespace SVPP_Lab5
     /// </summary>
     public partial class WindowShape : Window
     {
+
+        List<string> colors = new List<string> { "Red", "Green", "Blue" };
+
         public WindowShape()
         {
             InitializeComponent();
+            comboBoxFore.ItemsSource = colors;
+            comboBoxBack.ItemsSource = colors;
+
+   
+
+
         }
     }
 }
