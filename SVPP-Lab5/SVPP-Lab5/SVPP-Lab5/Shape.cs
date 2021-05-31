@@ -8,7 +8,7 @@ using System.Windows.Media;
 namespace SVPP_Lab5
 
 {
-    class Shape
+    public class Shape
     {
         public int Widght { get; set; }
         public Brush Background { get; set; }
@@ -20,6 +20,8 @@ namespace SVPP_Lab5
         {
         }
 
+ 
+
         public Shape(int widght, Brush background, Brush foreground, double x, double y)
         {
             Widght = widght;
@@ -27,6 +29,12 @@ namespace SVPP_Lab5
             Foreground = foreground;
             X = x;
             Y = y;
+        }
+
+        public Shape(Brush background, Brush foreground)
+        {
+            Background = background;
+            Foreground = foreground;
         }
 
         public override string ToString()

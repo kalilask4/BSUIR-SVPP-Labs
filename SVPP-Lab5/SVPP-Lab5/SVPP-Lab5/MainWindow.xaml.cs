@@ -22,6 +22,8 @@ namespace SVPP_Lab5
     {
 
 
+        Shape shape = new Shape();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +35,11 @@ namespace SVPP_Lab5
         {
             WindowShape windowShape = new WindowShape();
             if (windowShape.ShowDialog() == true)
-                MessageBox.Show("OK");
+               //MessageBox.Show("OK"); //to check
+               shape = windowShape.NewShape;
+             
         }
+
+
     }
 }

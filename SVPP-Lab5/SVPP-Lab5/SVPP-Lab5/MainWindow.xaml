@@ -8,7 +8,7 @@
         Title="ShapePainter" Height="450" Width="800">
     <DockPanel LastChildFill="True">
         <Menu Height="25" DockPanel.Dock="Top">
-            <MenuItem Header="Shape" Height="15" Click="MenuItem_Click" />
+            <MenuItem Header="Shape" Height="20" Click="MenuItem_Click" />
             <MenuItem Header="File">
                 <MenuItem Header="Load"/>
                 <MenuItem Header="Save"/>
@@ -22,7 +22,7 @@
             </StatusBarItem>
             
         </StatusBar>
-        <Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792"/>
+        <Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792" />
 
 
     </DockPanel>
