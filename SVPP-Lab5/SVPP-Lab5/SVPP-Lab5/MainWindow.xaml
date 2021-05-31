@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SVPP_Lab5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="ShapePainter" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+        <Menu Height="25" DockPanel.Dock="Top">
+            <MenuItem Header="Shape" />
+            <MenuItem Header="File">
+                <MenuItem Header="Load"/>
+                <MenuItem Header="Save"/>
+            </MenuItem>
+            <MenuItem Header="Help"/>
+            <MenuItem Header="Exit"/>
+        </Menu>
+        <StatusBar Background="CornflowerBlue" Opacity="0.25" DockPanel.Dock="Bottom" Height="25">
+            <StatusBarItem>
+                <TextBlock x:Name="TextBlockCursorPosition"/>
+            </StatusBarItem>
+            
+        </StatusBar>
+        <Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792"/>
+
+
+    </DockPanel>
 </Window>
