@@ -40,6 +40,9 @@ namespace SVPP_Lab5
              
         }
 
-
+        private void Canvas_MouseMove(object sender, MouseEventArgs e)
+        {
+            TextBlockCursorPosition.Text = e.GetPosition(Canvas).ToString();
+        }
     }
 }

@@ -22,7 +22,7 @@
             </StatusBarItem>
             
         </StatusBar>
-        <Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792" />
+        <Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792" MouseMove="Canvas_MouseMove"/>
 
 
     </DockPanel>
