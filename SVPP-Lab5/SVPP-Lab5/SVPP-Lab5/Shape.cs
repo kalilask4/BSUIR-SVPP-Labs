@@ -10,7 +10,7 @@ namespace SVPP_Lab5
 {
     public class Shape
     {
-        public int Widght { get; set; }
+        public int Width { get; set; }
         public Brush Background { get; set; }
         public Brush Foreground { get; set; }
         public double X { get; set; }
@@ -22,9 +22,9 @@ namespace SVPP_Lab5
 
  
 
-        public Shape(int widght, Brush background, Brush foreground, double x, double y)
+        public Shape(int width, Brush background, Brush foreground, double x, double y)
         {
-            Widght = widght;
+            Width = width;
             Background = background;
             Foreground = foreground;
             X = x;
@@ -39,7 +39,7 @@ namespace SVPP_Lab5
 
         public override string ToString()
         {
-            return $"Widght = {Widght}, Background = {Background}, Foreground = {Foreground}, ({X};{Y})";
+            return $"Widght = {Width}, Background = {Background}, Foreground = {Foreground}, ({X};{Y})";
         }
     }
 }

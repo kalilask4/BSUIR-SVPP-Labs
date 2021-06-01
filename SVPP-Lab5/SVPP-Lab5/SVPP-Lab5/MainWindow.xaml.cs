@@ -27,10 +27,10 @@ namespace SVPP_Lab5
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
-
-
+  
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             WindowShape windowShape = new WindowShape();
@@ -43,6 +43,39 @@ namespace SVPP_Lab5
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
             TextBlockCursorPosition.Text = e.GetPosition(Canvas).ToString();
+        }
+
+        private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (shape == null) return;
+            Polygon t = new Polygon();
+            t.Points = new PointCollection();
+            Point point1 = e.GetPosition(Canvas);
+            shape.X = point1.X;
+            shape.Y = point1.Y;
+           
+            Point point2 = new Point(shape.X + 30, shape.Y + 30);
+            Point point3 = new Point(shape.X + 30, shape.Y + 10);
+            Point point4 = new Point(shape.X + 90, shape.Y + 10);
+            Point point5 = new Point(shape.X + 90, shape.Y - 10);
+            Point point6 = new Point(shape.X + 30, shape.Y - 10);
+            Point point7 = new Point(shape.X + 30, shape.Y - 30);
+            t.Points.Add(point1);
+            t.Points.Add(point2);
+            t.Points.Add(point3);
+            t.Points.Add(point4);
+            t.Points.Add(point5);
+            t.Points.Add(point6);
+            t.Points.Add(point7);
+            t.Fill = shape.Background;
+            t.Stroke = shape.Foreground;
+            t.StrokeThickness = shape.Width;
+            Canvas.Children.Add(t);
+
+           
+
+           
+
         }
     }
 }

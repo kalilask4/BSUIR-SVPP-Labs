@@ -13,16 +13,18 @@
                 <MenuItem Header="Load"/>
                 <MenuItem Header="Save"/>
             </MenuItem>
-            <MenuItem Header="Help"/>
+            <MenuItem Header="Help" />
             <MenuItem Header="Exit"/>
         </Menu>
+        <!--<StatusBar Background="CornflowerBlue" Opacity="0.25" DockPanel.Dock="Bottom" Height="25">-->
         <StatusBar Background="CornflowerBlue" Opacity="0.25" DockPanel.Dock="Bottom" Height="25">
             <StatusBarItem>
                 <TextBlock x:Name="TextBlockCursorPosition"/>
             </StatusBarItem>
             
         </StatusBar>
-        <Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792" MouseMove="Canvas_MouseMove"/>
+        <!--<Canvas x:Name="Canvas" Background="Blue" Opacity="0.15" Width="792" MouseMove="Canvas_MouseMove" MouseDown="Canvas_MouseDown"/>-->
+        <Canvas x:Name="Canvas" Background="Azure" Opacity="1"  Width="792" MouseMove="Canvas_MouseMove" MouseDown="Canvas_MouseDown"/>
 
 
     </DockPanel>
