@@ -31,11 +31,32 @@ namespace SVPP_Lab5
             commandBindingHelp.Command = ApplicationCommands.Help;
             commandBindingHelp.Executed += help;
             menuItemHelp.CommandBindings.Add(commandBindingHelp);
+
+            CommandBinding commandBindingSave = new CommandBinding();
+            commandBindingSave.Command = ApplicationCommands.Save;
+            commandBindingSave.Executed += save;
+            menuItemSave.CommandBindings.Add(commandBindingSave);
+
+            CommandBinding commandBindingOpen = new CommandBinding();
+            commandBindingOpen.Command = ApplicationCommands.Open;
+            commandBindingOpen.Executed += open;
+            menuItemOpen.CommandBindings.Add(commandBindingOpen);
+
         }
 
         private void help(object sender, ExecutedRoutedEventArgs e)
         {
             MessageBox.Show("Help");
+        }
+
+        private void open(object sender, ExecutedRoutedEventArgs e)
+        {
+            shape = Shape.LoadFromFile();
+        }
+
+        private void save(object sender, ExecutedRoutedEventArgs e)
+        {
+            shape.SaveToFile();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

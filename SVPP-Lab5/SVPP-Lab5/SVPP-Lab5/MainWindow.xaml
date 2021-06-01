@@ -10,8 +10,8 @@
         <Menu Height="25" DockPanel.Dock="Top">
             <MenuItem Header="Shape" Height="20" Click="MenuItem_Click" />
             <MenuItem Header="File">
-                <MenuItem Header="Load"/>
-                <MenuItem Header="Save"/>
+                <MenuItem x:Name="menuItemOpen" Header="Open" Command="Open"/>
+                <MenuItem x:Name="menuItemSave" Header="Save" Command="Save"/>
             </MenuItem>
             <MenuItem x:Name="menuItemHelp" Header="Help" Command="Help"/>
             <MenuItem Header="Exit"/>
