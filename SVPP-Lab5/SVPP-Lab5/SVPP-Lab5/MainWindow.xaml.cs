@@ -27,10 +27,17 @@ namespace SVPP_Lab5
         public MainWindow()
         {
             InitializeComponent();
-
+            CommandBinding commandBindingHelp = new CommandBinding();
+            commandBindingHelp.Command = ApplicationCommands.Help;
+            commandBindingHelp.Executed += help;
+            menuItemHelp.CommandBindings.Add(commandBindingHelp);
         }
 
-  
+        private void help(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Help");
+        }
+
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             WindowShape windowShape = new WindowShape();

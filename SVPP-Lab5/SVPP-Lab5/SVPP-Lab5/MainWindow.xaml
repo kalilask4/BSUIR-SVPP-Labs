@@ -13,7 +13,7 @@
                 <MenuItem Header="Load"/>
                 <MenuItem Header="Save"/>
             </MenuItem>
-            <MenuItem Header="Help" />
+            <MenuItem x:Name="menuItemHelp" Header="Help" Command="Help"/>
             <MenuItem Header="Exit"/>
         </Menu>
         <!--<StatusBar Background="CornflowerBlue" Opacity="0.25" DockPanel.Dock="Bottom" Height="25">-->
