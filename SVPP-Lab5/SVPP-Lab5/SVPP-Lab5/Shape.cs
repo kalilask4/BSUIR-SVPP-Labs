@@ -22,6 +22,16 @@ namespace SVPP_Lab5
         byte[] color_background = new byte[3];
         byte[] color_foreground = new byte[3];
 
+        public int Width { get; set; }
+        public SolidColorBrush Background { get => background; set => background = value; }
+        public SolidColorBrush Foreground { get => foreground; set => foreground = value; }
+        public double X { get; set; }
+        public double Y { get; set; }
+
+        public Shape()
+        {
+        }
+
         private void PackColor()
         {
             color_background[0] = background.Color.R;
@@ -51,8 +61,8 @@ namespace SVPP_Lab5
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(fs, this);
             fs.Close();
-
         }
+
 
         public static Shape LoadFromFile()
         {
@@ -68,18 +78,6 @@ namespace SVPP_Lab5
         }
 
 
-        public int Width { get; set; }
-        public SolidColorBrush Background { get => background; set => background = value; }
-        public SolidColorBrush Foreground { get => foreground; set => foreground = value; }
-        public double X { get; set; }
-        public double Y { get; set; }
-
-        public Shape()
-        {
-        }
-
-
-
         public Shape(int width, SolidColorBrush background, SolidColorBrush foreground, double x, double y)
         {
             Width = width;
@@ -89,11 +87,13 @@ namespace SVPP_Lab5
             Y = y;
         }
 
+
         public Shape(SolidColorBrush background, SolidColorBrush foreground)
         {
             Background = background;
             Foreground = foreground;
         }
+
 
         public override string ToString()
         {

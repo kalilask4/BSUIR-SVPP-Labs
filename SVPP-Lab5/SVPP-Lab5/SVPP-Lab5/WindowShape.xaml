@@ -17,7 +17,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Line Widght" Margin="20.10" Width="80"/>
-            <TextBox x:Name="textBoxWidht" Text="{Binding Path=With}" Width="150"  Height="26" Margin="20, 10" />
+            <TextBox x:Name="textBoxWidht" Text="{Binding Path=Width}" Width="150"  Height="26" Margin="20, 10" />
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Button Content="Ok" Margin="40 , 25" Width="80" Click="Button_Click"/>

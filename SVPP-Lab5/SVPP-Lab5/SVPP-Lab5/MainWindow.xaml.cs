@@ -35,6 +35,7 @@ namespace SVPP_Lab5
             CommandBinding commandBindingSave = new CommandBinding();
             commandBindingSave.Command = ApplicationCommands.Save;
             commandBindingSave.Executed += save;
+            commandBindingSave.CanExecute += save_CanExecute;
             menuItemSave.CommandBindings.Add(commandBindingSave);
 
             CommandBinding commandBindingOpen = new CommandBinding();
@@ -42,6 +43,12 @@ namespace SVPP_Lab5
             commandBindingOpen.Executed += open;
             menuItemOpen.CommandBindings.Add(commandBindingOpen);
 
+        }
+
+
+        private void save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = shape != null;
         }
 
         private void help(object sender, ExecutedRoutedEventArgs e)
@@ -99,10 +106,7 @@ namespace SVPP_Lab5
             t.Stroke = shape.Foreground;
             t.StrokeThickness = shape.Width;
             Canvas.Children.Add(t);
-
-           
-
-           
+                      
 
         }
     }
