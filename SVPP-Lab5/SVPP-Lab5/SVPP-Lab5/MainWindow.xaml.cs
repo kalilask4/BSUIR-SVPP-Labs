@@ -22,7 +22,7 @@ namespace SVPP_Lab5
     {
 
 
-        Shape shape = new Shape();
+        Shape shape;
 
         public MainWindow()
         {
@@ -46,24 +46,33 @@ namespace SVPP_Lab5
         }
 
 
-        private void save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            e.CanExecute = shape != null;
-        }
-
         private void help(object sender, ExecutedRoutedEventArgs e)
         {
             MessageBox.Show("Help");
         }
+
 
         private void open(object sender, ExecutedRoutedEventArgs e)
         {
             shape = Shape.LoadFromFile();
         }
 
+
         private void save(object sender, ExecutedRoutedEventArgs e)
         {
             shape.SaveToFile();
+        }
+
+
+        private void save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            //if (shape != null)
+            //{
+            //    //MessageBox.Show("OK");
+            //    e.CanExecute = false;
+            //}
+
+            e.CanExecute = shape != null;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
