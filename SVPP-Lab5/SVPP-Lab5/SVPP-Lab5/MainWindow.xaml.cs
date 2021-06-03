@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,11 +8,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MessageBox = System.Windows.MessageBox;
+using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 
 namespace SVPP_Lab5
 {
@@ -23,6 +27,7 @@ namespace SVPP_Lab5
 
 
         Shape shape;
+
 
         public MainWindow()
         {
@@ -43,7 +48,16 @@ namespace SVPP_Lab5
             commandBindingOpen.Executed += open;
             menuItemOpen.CommandBindings.Add(commandBindingOpen);
 
+
+            //img_Clear.Source = new BitmapImage(new Uri("Images/Clear.png", UriKind.Relative));
+           // rbtnClear.ImageSource = new BitmapImage(new Uri("Images/Clear.png", UriKind.Relative));
+
+
+
+
         }
+
+
 
 
         private void help(object sender, ExecutedRoutedEventArgs e)
@@ -65,13 +79,7 @@ namespace SVPP_Lab5
 
 
         private void save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            //if (shape != null)
-            //{
-            //    //MessageBox.Show("OK");
-            //    e.CanExecute = false;
-            //}
-
+        {  
             e.CanExecute = shape != null;
         }
 
@@ -79,7 +87,6 @@ namespace SVPP_Lab5
         {
             WindowShape windowShape = new WindowShape();
             if (windowShape.ShowDialog() == true)
-               //MessageBox.Show("OK"); //to check
                shape = windowShape.NewShape;
              
         }
@@ -116,7 +123,11 @@ namespace SVPP_Lab5
             t.StrokeThickness = shape.Width;
             Canvas.Children.Add(t);
                       
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Canvas.Children.Clear();
         }
     }
 }
