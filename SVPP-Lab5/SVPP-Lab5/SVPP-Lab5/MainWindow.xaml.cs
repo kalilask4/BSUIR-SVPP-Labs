@@ -50,9 +50,10 @@ namespace SVPP_Lab5
 
 
             //img_Clear.Source = new BitmapImage(new Uri("Images/Clear.png", UriKind.Relative));
-           // rbtnClear.ImageSource = new BitmapImage(new Uri("Images/Clear.png", UriKind.Relative));
 
 
+            btnOpen.CommandBindings.Add(commandBindingOpen);
+            btnSave.CommandBindings.Add(commandBindingSave);
 
 
         }
@@ -125,9 +126,14 @@ namespace SVPP_Lab5
                       
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnClearClick(object sender, RoutedEventArgs e)
         {
             Canvas.Children.Clear();
         }
+
+        //private void btnOpen_Click(object sender, RoutedEventArgs e)
+        //{
+        //    shape = Shape.LoadFromFile();
+        //}
     }
 }

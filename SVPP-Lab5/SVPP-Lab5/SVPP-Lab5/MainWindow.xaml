@@ -23,57 +23,24 @@
         </StatusBar>
         
         
-        <ToolBar Height="90" DockPanel.Dock="Top">
-            <Button>Open</Button>
-            <Button>Save</Button>
-            <Button  ToolTip="Clear" x:Name="button_Clear" Click="Button_Click">
+        
+        <ToolBar Height="55" DockPanel.Dock="Top">
 
+
+            <Button ToolTip="Open" x:Name="btnOpen" Command="Open">
+                <Image Source="pack://application:,,,/Resources/Open.png"  Height="38"/>
+            </Button>
+
+            <Button ToolTip="Save" x:Name="btnSave" Command="Save">
+                <Image Source="pack://application:,,,/Resources/Save.png"  Height="45"/>
+            </Button>
+            
+            <Button  ToolTip="Clear" x:Name="btnClear" Click="btnClearClick">
                 <Image Source="pack://application:,,,/Resources/Clear.png" />
-              
-
             </Button>
 
 
-            <!--<Border>
-                <Button x:Name="btnClear" Width="85" Command="Open">
-                    <Button.Background>
-                        <ImageBrush  x:Name="rbtnClear"/>
-                    </Button.Background>
-                </Button>
-            </Border>-->
-
-            <!--<Button  x:Name="button_Clear" Click="Button_Click">
-                <StackPanel Orientation="Vertical" Height="90" Width="80">
-                    <Image Source="Images\Clear.png" Stretch="Fill" Height="60" Width="50" Opacity="1"/>
-                    <TextBlock Text="Clear" Margin="25, 5, 0, 10"/>
-
-                </StackPanel>
-
-                --><!--<Image Grid.Row="2" Name="canvas" Source="Images\Clear.png" Stretch="Fill" Opacity="1.0">
-                </Image>--><!--
-               
-            </Button>-->
-
-            <!--<Button  x:Name="button_Clear" Click="Button_Click">
-                <Button.Background>
-                    <ImageBrush  x:Name="img_Clear" Source="Images\Clear.gif" />
-                </Button.Background>-->
-
-                
-                
-                <!--Source="Images\Clear.png" Stretch="Fill" Height="60" Width="50" Opacity="1"-->
-                <!--<Image Grid.Row="2" Name="canvas" Source="Images\Clear.gif" Stretch="Fill" Opacity="1.0">
-                </Image>-->
-
-       
-
-
-
-
-
-
-
-            <Button ToolTip="Всплывающая подсказка для кнопки">Exit</Button>
+            <Button ToolTip="Exit">Exit</Button>
         </ToolBar>
         <Canvas x:Name="Canvas" Background="Azure" Opacity="1"  Width="792" MouseMove="Canvas_MouseMove" MouseDown="Canvas_MouseDown"/>
 
