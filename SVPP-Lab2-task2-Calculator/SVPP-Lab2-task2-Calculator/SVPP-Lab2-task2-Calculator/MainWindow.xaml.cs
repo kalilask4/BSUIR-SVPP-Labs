@@ -22,7 +22,6 @@ namespace SVPP_Lab2_task2_Calculator
     public partial class MainWindow : Window
     {
  
-
         public MainWindow()
         {
             InitializeComponent();

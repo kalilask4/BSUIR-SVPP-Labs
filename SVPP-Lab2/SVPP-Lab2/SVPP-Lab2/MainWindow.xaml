@@ -24,9 +24,9 @@
             <RadioButton FontSize="18" Margin="10,10,0,0" Content="Tg(x)"/>
         </StackPanel>
         <Button x:Name="btnCalculate" FontSize="20" Content="Calculate" HorizontalAlignment="Left" Margin="44,5,0,0" 
-                Grid.Row="2" VerticalAlignment="Top" Width="110" Click="btnCalculateclick"/>
+                Grid.Row="2" VerticalAlignment="Top" Width="110"/>
       
-  
+   <!--Click="btnCalculateclick"-->
 
     </Grid>
 

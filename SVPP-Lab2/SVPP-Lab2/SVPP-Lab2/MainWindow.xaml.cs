@@ -25,10 +25,10 @@ namespace SVPP_Lab2
             InitializeComponent();
         }
 
-        /*private void bntCalculate_Click(object sender, Route)
-        {
-            double result = calcFunc
-            }*/
+        //private void bntCalculate_Click(object sender, Route)
+        //{
+        //    double result = calcFunc
+        //    }
 
     
     }

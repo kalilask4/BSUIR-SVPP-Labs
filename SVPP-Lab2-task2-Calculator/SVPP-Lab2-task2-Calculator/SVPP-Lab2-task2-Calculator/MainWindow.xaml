@@ -21,7 +21,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Row="0" Grid.ColumnSpan="4" Text="0" FontSize="24" 
+            <TextBox Grid.Row="0" Grid.ColumnSpan="4" Text="" FontSize="24" 
                  FontFamily="Lucida Console" HorizontalContentAlignment ="Right"
                  VerticalContentAlignment ="Center" Padding="10 0 10 0"
                  x:Name="textLabel"
