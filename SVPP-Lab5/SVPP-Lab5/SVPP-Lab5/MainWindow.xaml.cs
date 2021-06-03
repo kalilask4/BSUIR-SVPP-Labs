@@ -131,9 +131,11 @@ namespace SVPP_Lab5
             Canvas.Children.Clear();
         }
 
-        //private void btnOpen_Click(object sender, RoutedEventArgs e)
-        //{
-        //    shape = Shape.LoadFromFile();
-        //}
+        private void btnExitClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }

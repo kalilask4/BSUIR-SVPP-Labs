@@ -14,7 +14,7 @@
                 <MenuItem x:Name="menuItemSave" Header="Save" Command="Save"/>
             </MenuItem>
             <MenuItem x:Name="menuItemHelp" Header="Help" Command="Help"/>
-            <MenuItem Header="Exit"/>
+            <!--<MenuItem Header="Exit"/>-->
         </Menu>
         <StatusBar Background="CornflowerBlue" Opacity="0.25" DockPanel.Dock="Bottom" Height="25">
             <StatusBarItem>
@@ -40,7 +40,10 @@
             </Button>
 
 
-            <Button ToolTip="Exit">Exit</Button>
+            <Button ToolTip="Exit" x:Name="Exit" Click="btnExitClick">
+                <Image Source="pack://application:,,,/Resources/Exit.png" Height="47" />
+                
+            </Button>
         </ToolBar>
         <Canvas x:Name="Canvas" Background="Azure" Opacity="1"  Width="792" MouseMove="Canvas_MouseMove" MouseDown="Canvas_MouseDown"/>
 
