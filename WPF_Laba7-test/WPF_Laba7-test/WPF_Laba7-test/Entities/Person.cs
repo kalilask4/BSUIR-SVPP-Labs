@@ -12,6 +12,6 @@ namespace WPF_Laba7_test.Entities
         public string Name { get; set; }
         //навигационные свойства
         public int DepartmentId { get; set; }
-        public virtual Department Department { get; set; } //virtual - сущности будут добавляться автоматически, иначе их необходимо добавлять явно
+        public Department Department { get; set; } //virtual - сущности будут добавляться автоматически, иначе их необходимо добавлять явно
     }
 }

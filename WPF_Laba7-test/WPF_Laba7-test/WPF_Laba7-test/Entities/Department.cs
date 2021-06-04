@@ -11,6 +11,6 @@ namespace WPF_Laba7_test.Entities
         public int DepartmentId { get; set; }
         public string Name { get; set; }
         //навигационные свойства
-        public virtual List<Person> Persons { get; set; } //virtual - сущности будут добавляться автоматически, иначе их необходимо добавлять явно
+        public List<Person> Persons { get; set; } //virtual - сущности будут добавляться автоматически, иначе их необходимо добавлять явно
     }
 }

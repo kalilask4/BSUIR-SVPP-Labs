@@ -25,10 +25,17 @@ namespace WPF_Laba7_test
             //});
 
 
-            var dept = context.Departments.FirstAsync(d => d.Name == "Sales").Result;
+            var dept = context.Departments.Include(d => d.Persons)
+                .FirstAsync(d => d.Name == "Sales")
+                .Result;
 
-            dept.Persons.Add(new Person { Name = "Vova" }); //неявно, работает, если List<Person> и Department virtual
-           
+            //dept.Persons.Add(new Person { Name = "Vova" }); //неявно, работает, если List<Person> и Department virtual
+            //dept.Persons.Add(new Person { Name = "Vova" });
+            dept.Persons.Add(new Person { Name = "Bob" });
+
+
+            //var pers = new Person { Name = "Bob" };
+            //pers.DepartmentId = dept.DepartmentId;
 
 
 
