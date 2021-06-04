@@ -14,8 +14,8 @@ namespace WPF_Laba7_test.Data
             {
             }
 
-            DbSet<Person> Persons { get; set; }
-            DbSet<Department> Departments { get; set; }
+            public DbSet<Person> Persons { get; set; }
+            public DbSet<Department> Departments { get; set; }
 
     }
 }
