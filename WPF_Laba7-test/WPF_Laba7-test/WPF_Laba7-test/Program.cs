@@ -18,14 +18,19 @@ namespace WPF_Laba7_test
 
             var context = new AppDbContext(options);
 
-            context.Database.EnsureCreated(); //check: db created
+            //context.Database.EnsureCreated(); //check: db created
 
-            context.Departments.Add(new Department {
-                Name = "Sales"
-            });
+            //context.Departments.Add(new Department {
+            //    Name = "Sales"
+            //});
 
 
-          
+            var dept = context.Departments.FirstAsync(d => d.Name == "Sales").Result;
+
+            dept.Persons.Add(new Person { Name = "Vova" }); //неявно, работает, если List<Person> и Department virtual
+           
+
+
 
             context.SaveChanges();
 
