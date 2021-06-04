@@ -8,5 +8,9 @@ namespace WPF_Laba7_test.Entities
 {
     class Department
     {
+        public int DepartmentId { get; set; }
+        public string Name { get; set; }
+        //навигационные свойства
+        public List<Person> Persons { get; set; }
     }
 }

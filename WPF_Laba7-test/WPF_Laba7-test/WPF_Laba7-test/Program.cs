@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using WPF_Laba7_test.Data;
 
 namespace WPF_Laba7_test
 {
@@ -7,6 +9,9 @@ namespace WPF_Laba7_test
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+           
+
         }
     }
 }
