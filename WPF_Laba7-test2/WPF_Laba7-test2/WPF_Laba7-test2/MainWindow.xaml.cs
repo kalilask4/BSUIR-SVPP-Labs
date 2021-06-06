@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace WPF_Laba7
+namespace WPF_Laba7_test2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,11 +23,6 @@ namespace WPF_Laba7
         public MainWindow()
         {
             InitializeComponent();
-
-           // var connStr = "Server=(localdb)\\mssqllocaldb; Database = CoinDb; Trusted_Connection=True; MultipleActiveResultSets=true";
-           // var builder = new DbContextOptionsBuilder<AppDbContext>();
-            //var options = builder.UseSqlServer(connStr).Options;
-            //var context = new AppDbContext(options);
         }
     }
 }

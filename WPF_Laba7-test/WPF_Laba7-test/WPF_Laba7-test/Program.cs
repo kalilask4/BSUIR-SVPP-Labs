@@ -11,7 +11,7 @@ namespace WPF_Laba7_test
         {
             Console.WriteLine("Hello World!");
 
-            var connStr = "Server=(localdb)\\mssqllocaldb; Database = CoinDb; Trusted_Connection=True; MultipleActiveResultSets=true";             
+            var connStr = "Server=(localdb)\\mssqllocaldb; Database = TestDb; Trusted_Connection=True; MultipleActiveResultSets=true";             
 
             var builder = new DbContextOptionsBuilder<AppDbContext>();
             var options = builder.UseSqlServer(connStr).Options; 
@@ -30,12 +30,9 @@ namespace WPF_Laba7_test
                 .Result;
 
             //dept.Persons.Add(new Person { Name = "Vova" }); //неявно, работает, если List<Person> и Department virtual
-            //dept.Persons.Add(new Person { Name = "Vova" });
+            dept.Persons.Add(new Person { Name = "Vova" });
             dept.Persons.Add(new Person { Name = "Bob" });
 
-
-            //var pers = new Person { Name = "Bob" };
-            //pers.DepartmentId = dept.DepartmentId;
 
 
 
