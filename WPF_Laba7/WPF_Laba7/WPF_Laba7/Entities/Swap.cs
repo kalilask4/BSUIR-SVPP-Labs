@@ -8,5 +8,10 @@ namespace WPF_Laba7.Entities
 {
     class Swap
     {
+        public int SwapId { get; set; }
+        public string Type { get; set; }
+        public string DbCoinId { get; set; }
+        public string KdCoinId { get; set; }
+        public double Amount { get; set; }
     }
 }
