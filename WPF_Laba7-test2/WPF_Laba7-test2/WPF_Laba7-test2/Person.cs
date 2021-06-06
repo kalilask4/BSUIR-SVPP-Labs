@@ -9,12 +9,10 @@ namespace WPF_Laba7_test2
     class Person
     {
 
-      
-            public int PersonId { get; set; }
-            public string Name { get; set; }
-            public int Age { get; set; }
-            public string Company { get; set; }
-            public decimal Salary { get; set; }
-            
+        public int PersonId { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Company { get; set; }
+        public decimal Salary { get; set; }
     }
 }

@@ -5,8 +5,92 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Laba7_test2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Lab7-test Work with BD" Height="300" Width="700">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Background" Value="BlanchedAlmond"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+    </Window.Resources>
+    
+    
+    <Grid Margin="20. 20. 20. 20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+           
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            <Button Name="btnShowList"  Content="Show" Margin="5" Click="btnShowList_Click"/>
+            <Button Name="btnShowList2"  Content="Insert"/>
+            <Button Name="btnShowList3"  Content="Find"/>
+            <Button Name="btnShowList4"  Content="Update"/>
+            <Button Name="btnShowList5"  Content="Delete"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Background="AliceBlue" Margin="40,25,35,50">
+            <Grid x:Name="gridPerson">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions  >
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" >Id</Label>
+                <TextBlock x:Name="textBoxPersonId" Grid.Column="1" Grid.Row="0" Text="{Binding Path=PersonId}">Id</TextBlock>
+
+                <Label Grid.Column="0" Grid.Row="1" >Name</Label>
+                <TextBlock x:Name="textBoxName" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Name}">Name</TextBlock>
+
+                <Label Grid.Column="0" Grid.Row="2" >Age</Label>
+                <TextBlock x:Name="textAge" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Age}">Age</TextBlock>
+
+                <Label Grid.Column="2" Grid.Row="0" >Company</Label>
+                <TextBlock x:Name="textBoxCompany" Grid.Column="3" Grid.Row="0" Text="{Binding Path=PersonName}">Company</TextBlock>
+
+                <Label Grid.Column="2" Grid.Row="1" >Salary</Label>
+                <TextBlock x:Name="textBoxSalary" Grid.Column="3" Grid.Row="1" Text="{Binding Path=PersonId}">Salary</TextBlock>
+
+                
+
+
+
+
+
+            </Grid>
+
+
+
+
+
+        </StackPanel>
+
+
+
     </Grid>
 </Window>

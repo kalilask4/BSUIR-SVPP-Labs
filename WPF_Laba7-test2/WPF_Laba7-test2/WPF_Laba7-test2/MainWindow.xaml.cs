@@ -24,5 +24,10 @@ namespace WPF_Laba7_test2
         {
             InitializeComponent();
         }
+
+        private void btnShowList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
