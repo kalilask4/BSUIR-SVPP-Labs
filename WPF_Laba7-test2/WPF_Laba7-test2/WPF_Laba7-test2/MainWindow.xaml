@@ -21,7 +21,7 @@
             <Setter Property="FontFamily" Value="Brevia Light"/>
             <Setter Property="FontSize" Value="12"/>
         </Style>
-        <Style TargetType="TextBlock">
+        <Style TargetType="TextBox">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="5"/>
             <Setter Property="FontFamily" Value="Brevia"/>
@@ -49,7 +49,7 @@
         <StackPanel Grid.Column="0" VerticalAlignment="Center">
             <Button Name="btnShow"  Content="Show" Margin="5" Click="btnShow_Click"/>
             <Button Name="btnInsert"  Content="Insert" Click="btnInsert_Click" />
-            <Button Name="btnFind"  Content="Find" Click="btnFind_Click"/>
+            <Button Name="btnFind" ToolTip="Enter Name" Content="Find" Click="btnFind_Click"/>
             <Button Name="btnUpdate"  Content="Update" Click="btnUpdate_Click"/>
             <Button Name="btnDelete"  Content="Delete" Click="btnDelete_Click"/>
         </StackPanel>
@@ -75,25 +75,25 @@
                 </Grid.RowDefinitions>
 
                 <Label Grid.Column="0" Grid.Row="0" >Id</Label>
-                <TextBlock x:Name="textBoxPersonId" Grid.Column="1" Grid.Row="0" Text="{Binding Path=PersonId}"></TextBlock>
+                <TextBox x:Name="textBoxPersonId" Grid.Column="1" Grid.Row="0" Text="{Binding Path=PersonId}"></TextBox>
 
-                <Label Grid.Column="0" Grid.Row="1" >Name</Label>
-                <TextBlock x:Name="textBoxName" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Name}"></TextBlock>
+                <Label Grid.Column="0" Grid.Row="1">Name</Label>
+                <TextBox x:Name="textBoxName" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Name}"></TextBox>
 
                 <Label Grid.Column="0" Grid.Row="2" >Age</Label>
-                <TextBlock x:Name="textAge" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Age}"></TextBlock>
+                <TextBox x:Name="textAge" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Age}"></TextBox>
 
                 <Label Grid.Column="2" Grid.Row="0" >Company</Label>
-                <TextBlock x:Name="textBoxCompany" Grid.Column="3" Grid.Row="0" Text="{Binding Path=Company}"></TextBlock>
+                    <TextBox x:Name="textBoxCompany" Grid.Column="3" Grid.Row="0" Text="{Binding Path=Company}"></TextBox>
 
                 <Label Grid.Column="2" Grid.Row="1" >Salary</Label>
-                <TextBlock x:Name="textBoxSalary" Grid.Column="3" Grid.Row="1" Text="{Binding Path=Salary}"></TextBlock>
+                <TextBox x:Name="textBoxSalary" Grid.Column="3" Grid.Row="1" Text="{Binding Path=Salary}"></TextBox>
 
-                <ListBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="listBix" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="Yellow" Opacity="0.25"/>
+                <!--<ListBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="listBix" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="Yellow" Opacity="0.25"/>-->
 
-                <!--<Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" Background="LawnGreen" Opacity="0.3" Margin="7, 7, 7, 7">
-                    <ListBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="listBix0" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="Yellow" Opacity="0.25"/>
-                </Border>-->
+                <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" Background="LawnGreen" Opacity="0.3" Margin="7, 7, 7, 7">
+                    <ListBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="YellowGreen" Opacity="0.99"/>
+                </Border>
 
 
             </Grid>

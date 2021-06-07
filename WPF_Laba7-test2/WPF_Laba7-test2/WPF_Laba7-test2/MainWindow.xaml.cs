@@ -30,7 +30,7 @@ namespace WPF_Laba7_test2
             InitializeComponent();
             person = new Person();
             gridPerson.DataContext = person;
-            listBix.DataContext = collection;
+            listBox.DataContext = collection;
         }
 
         private void btnShow_Click(object sender, RoutedEventArgs e)
@@ -45,7 +45,11 @@ namespace WPF_Laba7_test2
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
-
+            Person personFind = Person.Find(textBoxName.Text);
+            if (personFind == null)
+                MessageBox.Show("Nothing found.");
+            else
+                MessageBox.Show(personFind.ToString());
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)

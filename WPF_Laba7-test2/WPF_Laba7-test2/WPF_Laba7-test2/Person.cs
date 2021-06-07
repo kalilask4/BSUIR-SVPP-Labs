@@ -55,9 +55,20 @@ namespace WPF_Laba7_test2
             connection.Close();
         }
 
+        public static Person Find(string name)
+        {
+            foreach(var person in getAllPersons())
+            {
+                if (person.Name == name)
+                    return person;
+            }
+            return null;
+        }
+
+
         public override string ToString()
         {
-            return $"{PersonId} {Name}, {Age} years old. Company is {Company}, {Salary}" ;
+            return $"{PersonId} {Name}, {Age} years old. Company is {Company} (${Salary})";
         }
     }
 
