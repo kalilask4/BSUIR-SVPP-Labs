@@ -48,7 +48,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" VerticalAlignment="Center">
             <Button Name="btnShow"  Content="Show" Margin="5" Click="btnShow_Click"/>
-            <Button Name="btnInsert"  Content="Insert" Click="btnInsert_Click" />
+            <Button Name="btnInsert" ToolTip="Fill fields" Content="Insert" Click="btnInsert_Click" />
             <Button Name="btnFind" ToolTip="Enter Name" Content="Find" Click="btnFind_Click"/>
             <Button Name="btnUpdate"  Content="Update" Click="btnUpdate_Click"/>
             <Button Name="btnDelete"  ToolTip="Choose Person" Content="Delete" Click="btnDelete_Click"/>
