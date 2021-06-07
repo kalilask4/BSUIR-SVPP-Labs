@@ -75,6 +75,21 @@ namespace WPF_Laba7_test2
             connection.Close();
         }
 
+        public void Insert()
+        {
+            newConnection();
+            var commandString = "INSERT INTO Person(Name, Age, Company, Salary) values(@name, @age, @Company, @Salary )";
+            SqlCommand insertCommand = new SqlCommand(commandString, connection);
+            insertCommand.Parameters.AddRange(new SqlParameter[]
+                {
+                    new SqlParameter("Name", Name),
+                    new SqlParameter("Age", Age),
+                    new SqlParameter("Company", Company),
+                    new SqlParameter("Salary", Salary),
+                });
+            insertCommand.ExecuteNonQuery();
+            connection.Close();
+        }
 
         public override string ToString()
         {

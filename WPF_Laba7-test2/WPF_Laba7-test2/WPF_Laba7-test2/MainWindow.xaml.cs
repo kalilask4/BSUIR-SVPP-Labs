@@ -40,7 +40,8 @@ namespace WPF_Laba7_test2
 
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
-
+            person?.Insert();
+            FillData();
         }
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
