@@ -91,6 +91,32 @@ namespace WPF_Laba7_test2
             connection.Close();
         }
 
+        public void Update()
+        {
+            newConnection();
+            var commandString = "UPDATE Person SET Name=@name, Age=@age, Company=@company, Salary=@salary " +
+                "WHERE (PersonId=@id)";
+            SqlCommand updateCommand = new SqlCommand(commandString, connection);
+            updateCommand.Parameters.AddRange(new SqlParameter[]
+                {
+                    new SqlParameter("id", PersonId),
+                    new SqlParameter("Name", Name),
+                    new SqlParameter("Age", Age),
+                    new SqlParameter("Company", Company),
+                    new SqlParameter("Salary", Salary),
+                });
+            updateCommand.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void updatePerson(Person personNew)
+        {
+            if (personNew.Name?.Length > 0) Name = personNew.Name;
+            if (personNew.Age > 0) Age = personNew.Age;
+            if (personNew.Company?.Length > 0) Company = personNew.Company;
+            if (personNew.Salary > 0) Salary  = personNew.Salary;
+        }
+
         public override string ToString()
         {
             return $"{PersonId} {Name}, {Age} years old. Company is {Company} (${Salary})";

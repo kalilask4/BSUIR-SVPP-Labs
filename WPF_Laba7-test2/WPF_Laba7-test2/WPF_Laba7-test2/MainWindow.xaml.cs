@@ -55,6 +55,12 @@ namespace WPF_Laba7_test2
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            if (listBox.SelectedIndex < 0)
+                return;
+            Person prersonUpdate = (Person)listBox.SelectedItem;
+            prersonUpdate.updatePerson(person);
+            prersonUpdate.Update();
+            FillData();
 
         }
 
