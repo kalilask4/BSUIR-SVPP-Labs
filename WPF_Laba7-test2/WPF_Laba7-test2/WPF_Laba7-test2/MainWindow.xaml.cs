@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace WPF_Laba7_test2
 {
@@ -20,10 +21,50 @@ namespace WPF_Laba7_test2
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Person person;
+        ObservableCollection<Person> collection = new ObservableCollection<Person>();
+
         public MainWindow()
         {
             InitializeComponent();
+            person = new Person();
+            gridPerson.DataContext = person;
+            listBix.DataContext = collection;
         }
 
+        private void btnShow_Click(object sender, RoutedEventArgs e)
+        {
+            FillData();
+        }
+
+        private void btnInsert_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FillData()
+        {
+            collection.Clear();
+            foreach(var p in Person.getAllPersons())
+            {
+                collection.Add(p);
+            }
+        }
     }
 }
