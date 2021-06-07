@@ -59,7 +59,10 @@ namespace WPF_Laba7_test2
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if (listBox.SelectedIndex < 0)
+                return;
+            Person.Delete(((Person)listBox.SelectedItem).PersonId);
+            FillData();
         }
 
         private void FillData()

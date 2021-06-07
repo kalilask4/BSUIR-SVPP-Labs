@@ -31,7 +31,7 @@ namespace WPF_Laba7_test2
             newConnection();
             var commandString = "SELECT * FROM Person";
             SqlCommand getAllCommand = new SqlCommand(commandString, connection);
-            var reader = getAllCommand.ExecuteReader();
+            var reader = getAllCommand.ExecuteReader();    //запрос возвращает данные
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -63,6 +63,16 @@ namespace WPF_Laba7_test2
                     return person;
             }
             return null;
+        }
+
+        public static void Delete(int id)
+        {
+            newConnection();
+            var commandString = "DELETE FROM Person WHERE (PersonId=@id)";
+            SqlCommand deleteCommand = new SqlCommand(commandString, connection);
+            deleteCommand.Parameters.AddWithValue("id", id);
+            deleteCommand.ExecuteNonQuery(); //запрос выполняется не возвращая данные
+            connection.Close();
         }
 
 

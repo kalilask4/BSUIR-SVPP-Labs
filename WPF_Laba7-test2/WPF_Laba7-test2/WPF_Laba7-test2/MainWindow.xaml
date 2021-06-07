@@ -51,7 +51,7 @@
             <Button Name="btnInsert"  Content="Insert" Click="btnInsert_Click" />
             <Button Name="btnFind" ToolTip="Enter Name" Content="Find" Click="btnFind_Click"/>
             <Button Name="btnUpdate"  Content="Update" Click="btnUpdate_Click"/>
-            <Button Name="btnDelete"  Content="Delete" Click="btnDelete_Click"/>
+            <Button Name="btnDelete"  ToolTip="Choose Person" Content="Delete" Click="btnDelete_Click"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Background="Lavender" Opacity="0.9" Margin="10,10,27,10">
         
