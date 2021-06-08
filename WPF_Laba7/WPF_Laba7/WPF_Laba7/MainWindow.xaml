@@ -23,6 +23,16 @@
                 <Button Name="btnUpdate"  Content="Update"/>
                 <Button Name="btnDelete" Content="Delete"/>
             </StackPanel>
-
-        </Grid>
+        <StackPanel Grid.Column="1">
+            <Grid x:Name="gridCoin">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions  >
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                    <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="Yellow"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
 </Window>
