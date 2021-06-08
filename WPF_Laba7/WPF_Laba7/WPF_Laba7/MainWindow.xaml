@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:WPF_Laba7"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    
+    <Grid Margin="30. 20. 8. 30">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\kalil\Desktop\background.jpg" Opacity="0.2"></ImageBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.01*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                <Button Name="btnShow"  Content="Show" Margin="5"/>
+                <Button Name="btnInsert" Content="Insert"/>
+                <Button Name="btnFind" Content="Find"/>
+                <Button Name="btnUpdate"  Content="Update"/>
+                <Button Name="btnDelete" Content="Delete"/>
+            </StackPanel>
+
+        </Grid>
 </Window>

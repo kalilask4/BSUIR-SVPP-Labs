@@ -25,10 +25,6 @@ namespace WPF_Laba7
         {
             InitializeComponent();
 
-           // var connStr = "Server=(localdb)\\mssqllocaldb; Database = CoinDb; Trusted_Connection=True; MultipleActiveResultSets=true";
-           // var builder = new DbContextOptionsBuilder<AppDbContext>();
-            //var options = builder.UseSqlServer(connStr).Options;
-            //var context = new AppDbContext(options);
         }
     }
 }

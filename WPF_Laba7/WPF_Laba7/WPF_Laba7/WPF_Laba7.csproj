@@ -64,9 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\AppDbContext.cs" />
-    <Compile Include="Entities\Coin.cs" />
-    <Compile Include="Entities\Swap.cs" />
+    <Compile Include="Coin.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

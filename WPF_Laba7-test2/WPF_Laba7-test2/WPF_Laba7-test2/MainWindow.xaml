@@ -48,6 +48,7 @@
             <Button Name="btnUpdate"  Content="Update" Click="btnUpdate_Click"/>
             <Button Name="btnDelete"  ToolTip="Choose Person" Content="Delete" Click="btnDelete_Click"/>
         </StackPanel>
+		
         <StackPanel Grid.Column="1" Background="Lavender" Opacity="0.9" Margin="10,10,27,10">
             <Grid x:Name="gridPerson">
                 <Grid.ColumnDefinitions>
