@@ -40,6 +40,12 @@ namespace WPF_Laba7
             FillData();
         }
 
+        private void btnInsert_Click(object sender, RoutedEventArgs e)
+        {
+            coin?.Insert();
+            FillData();
+        }
+
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             if (listBox.SelectedIndex < 0)

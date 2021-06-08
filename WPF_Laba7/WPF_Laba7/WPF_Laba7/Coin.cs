@@ -61,6 +61,23 @@ namespace WPF_Laba7.Entities
             connection.Close();
         }
 
+        public void Insert()
+        {
+            newConnection();
+            var commandString = "INSERT INTO Coin(Title, Amount, CrtPrice, CrtCost) values(@title, @amount, @crtPrice, @crtCost)";
+            SqlCommand sqlCommand = new SqlCommand(commandString, connection);
+            sqlCommand.Parameters.AddRange(new SqlParameter[]
+                {
+                    new SqlParameter("Title", Title),
+                    new SqlParameter("Amount", Amount),
+                    new SqlParameter("CrtPrice", CrtPrice),
+                    new SqlParameter("CrtCost", CrtCost),
+                });
+            sqlCommand.ExecuteNonQuery();
+            connection.Close();
+        }
+
+
         public static void Delete(int id)
         {
             newConnection();
