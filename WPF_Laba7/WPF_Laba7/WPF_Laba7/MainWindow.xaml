@@ -21,7 +21,7 @@
                 <Button Name="btnInsert" Content="Insert"/>
                 <Button Name="btnFind" Content="Find"/>
                 <Button Name="btnUpdate"  Content="Update"/>
-                <Button Name="btnDelete" Content="Delete"/>
+                <Button Name="btnDelete" Content="Delete" Click="btnDelete_Click"/>
             </StackPanel>
         <StackPanel Grid.Column="1">
             <Grid x:Name="gridCoin">

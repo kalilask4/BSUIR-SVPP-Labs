@@ -61,7 +61,15 @@ namespace WPF_Laba7.Entities
             connection.Close();
         }
 
-
+        public static void Delete(int id)
+        {
+            newConnection();
+            var commandString = "DELETE FROM Coin WHERE (CoinId=@id)";
+            SqlCommand sqlCommand = new SqlCommand(commandString, connection);
+            sqlCommand.Parameters.AddWithValue("id", id);
+            sqlCommand.ExecuteNonQuery(); //запрос выполняется не возвращая данные
+            connection.Close();
+        }
 
 
 

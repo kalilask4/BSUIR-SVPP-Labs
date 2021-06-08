@@ -40,6 +40,14 @@ namespace WPF_Laba7
             FillData();
         }
 
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox.SelectedIndex < 0)
+                return;
+            Coin.Delete(((Coin)listBox.SelectedItem).CoinId);
+            FillData();
+        }
+
         private void FillData()
         {
             collection.Clear();
@@ -48,5 +56,6 @@ namespace WPF_Laba7
                 collection.Add(p);
             }
         }
+
     }
 }
