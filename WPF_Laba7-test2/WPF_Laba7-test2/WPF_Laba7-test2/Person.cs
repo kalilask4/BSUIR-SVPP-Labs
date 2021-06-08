@@ -50,7 +50,7 @@ namespace WPF_Laba7_test2
                         Salary = salary
                     };
                     yield return person;
-                }          
+                }
             }
             connection.Close();
         }
