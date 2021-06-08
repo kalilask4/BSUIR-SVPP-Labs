@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="0.01*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                <Button Name="btnShow"  Content="Show" Margin="5"/>
+            <Button Name="btnShow"  Content="Show" Click="btnShow_Click" />
                 <Button Name="btnInsert" Content="Insert"/>
                 <Button Name="btnFind" Content="Find"/>
                 <Button Name="btnUpdate"  Content="Update"/>
