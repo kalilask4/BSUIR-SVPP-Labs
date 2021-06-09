@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Laba7", "WPF_Laba7\WPF_Laba7.csproj", "{F2BE3CB2-425E-4EDE-8763-E542672EA286}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{A70770B9-07A8-44B3-B511-3D82492BEB5F}"
+	ProjectSection(SolutionItems) = preProject
+		..\Resources\abstr.jpg = ..\Resources\abstr.jpg
+		..\Resources\white.jpg = ..\Resources\white.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,0 +1,10 @@
+diff a/WPF_Laba7/WPF_Laba7/WPF_Laba7/MainWindow.xaml b/WPF_Laba7/WPF_Laba7/WPF_Laba7/MainWindow.xaml	(rejected hunks)
+@@ -35,7 +35,7 @@
+     
+     <Grid Margin="30. 20. 8. 30">
+             <Grid.Background>
+-                <ImageBrush ImageSource="C:\Users\kalil\Desktop\background.jpg" Opacity="0.2"></ImageBrush>
++            <!--<ImageBrush ImageSource="pack://application:,,,/Resources/abstr.jpg" Opacity="0.2"></ImageBrush>-->
+             </Grid.Background>
+             <Grid.ColumnDefinitions>
+                 <ColumnDefinition Width="0.3*"/>

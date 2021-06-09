@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:WPF_Laba7"
         mc:Ignorable="d"
         Title="MainWindow" Height="360" Width="680">
+    <Window.Background>
+        <!--<ImageBrush ImageSource="Source="pack://application:,,,/Resources/Open.png/abstr.jpg" Opacity="1"></ImageBrush>-->
+        <ImageBrush ImageSource="C:\Users\kalil\source\repos\BSUIR-SVPP-Labs\WPF_Laba7\Resources\abstr.jpg" Opacity="1"></ImageBrush>
+    </Window.Background>
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="5"/>
@@ -31,9 +35,9 @@
     </Window.Resources>
     
     <Grid Margin="30. 20. 8. 30">
-            <Grid.Background>
+            <!--<Grid.Background>
                 <ImageBrush ImageSource="C:\Users\kalil\Desktop\background.jpg" Opacity="0.2"></ImageBrush>
-            </Grid.Background>
+            </Grid.Background>-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.3*"/>
                 <ColumnDefinition/>
@@ -82,7 +86,17 @@
                 <TextBox x:Name="textBoxCrtCost" Grid.Column="3" Grid.Row="1" Text="{Binding Path=CrtCost}"></TextBox>
 
                 <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6" Margin="7, 7, 7, 7">
-                    <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="LightYellow"/>
+                    <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto">
+                        <ListBox.Background>
+                            <ImageBrush ImageSource="C:\Users\kalil\source\repos\BSUIR-SVPP-Labs\WPF_Laba7\Resources\white.jpg" Opacity="0.39"></ImageBrush>
+                            <!--<ImageBrush ImageSource="pack://application:,,,/Resources/abstr.jpg"/>-->
+
+
+                            <!--<ImageBrush ImageSource="pack://application:,,,/Resources/abstr.jpg"/>-->
+
+                            <!--<ImageBrush ImageSource="C:\Users\kalil\Desktop\background.jpg"/>-->
+                        </ListBox.Background>
+                    </ListBox> 
                 </Border>
                 
                 
