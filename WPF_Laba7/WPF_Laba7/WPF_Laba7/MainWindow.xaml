@@ -5,7 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Laba7"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="360" Width="680">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Brevia"/>
+            <Setter Property="Background" Value="BlanchedAlmond"/>
+            <Setter Property="Opacity" Value="0.78"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Brevia Light"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Brevia"/>
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+    </Window.Resources>
     
     <Grid Margin="30. 20. 8. 30">
             <Grid.Background>
@@ -40,17 +63,17 @@
                     <RowDefinition Height="35"/>
                     <RowDefinition Height="35"/>
                     <RowDefinition Height="35"/>
-                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="35"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" >Id</Label>
-                <TextBox x:Name="textBoxCoinId" Grid.Column="1" Grid.Row="0" Text="{Binding Path=Coin}"></TextBox>
+                <!--<Label Grid.Column="0" Grid.Row="0" >Id</Label>
+                <TextBox x:Name="textBoxCoinId" Grid.Column="1" Grid.Row="0" Text="{Binding Path=Coin}"></TextBox>-->
 
-                <Label Grid.Column="0" Grid.Row="1">Title</Label>
-                <TextBox x:Name="textBoxTitle" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Title}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="0">Title</Label>
+                <TextBox x:Name="textBoxTitle" Grid.Column="1" Grid.Row="0" Text="{Binding Path=Title}"></TextBox>
 
-                <Label Grid.Column="0" Grid.Row="2">Amount</Label>
-                <TextBox x:Name="textBoxAmount" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Amount}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="1">Amount</Label>
+                <TextBox x:Name="textBoxAmount" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Amount}"></TextBox>
 
                 <Label Grid.Column="2" Grid.Row="0" >CrtPrice</Label>
                 <TextBox x:Name="textBoxCrtPrice" Grid.Column="3" Grid.Row="0" Text="{Binding Path=CrtPrice}"></TextBox>
@@ -58,8 +81,8 @@
                 <Label Grid.Column="2" Grid.Row="1">CrtCost</Label>
                 <TextBox x:Name="textBoxCrtCost" Grid.Column="3" Grid.Row="1" Text="{Binding Path=CrtCost}"></TextBox>
 
-                <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" Margin="7, 7, 7, 7">
-                    <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="Yellow"/>
+                <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6" Margin="7, 7, 7, 7">
+                    <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto" Background="LightYellow"/>
                 </Border>
                 
                 
