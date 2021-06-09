@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{A70770B9-07A8-44B3-B511-3D82492BEB5F}"
 	ProjectSection(SolutionItems) = preProject
 		..\Resources\abstr.jpg = ..\Resources\abstr.jpg
+		..\Resources\abstr2.jpg = ..\Resources\abstr2.jpg
 		..\Resources\white.jpg = ..\Resources\white.jpg
 	EndProjectSection
 EndProject

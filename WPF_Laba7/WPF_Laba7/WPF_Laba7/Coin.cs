@@ -19,7 +19,7 @@ namespace WPF_Laba7.Entities
         //public double AvgPrice { get; set; } //the average price should be calculated based on transactions at different times
         public double CrtPrice { get; set; } //the current price should ideally be loaded from binance
         //public double AvgCost { get; set; } //Amount*AvgPrice
-        public double CrtCost { get; set; } //Amount*CurPrice
+        public double CrtCost { get; set; } //Amount*CrtPrice
 
 
         public static void newConnection()

@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Laba7"
         mc:Ignorable="d"
-        Title="MainWindow" Height="360" Width="680">
+        Height="360" Width="680">
+    <Window.Title>
+      CoinBase
+    </Window.Title>
     <Window.Background>
         <!--<ImageBrush ImageSource="Source="pack://application:,,,/Resources/Open.png/abstr.jpg" Opacity="1"></ImageBrush>-->
-        <ImageBrush ImageSource="C:\Users\kalil\source\repos\BSUIR-SVPP-Labs\WPF_Laba7\Resources\abstr.jpg" Opacity="1"></ImageBrush>
+        <ImageBrush ImageSource="C:\Users\kalil\source\repos\BSUIR-SVPP-Labs\WPF_Laba7\Resources\abstr2.jpg" Opacity="1"></ImageBrush>
     </Window.Background>
     <Window.Resources>
         <Style TargetType="Button">
@@ -54,9 +57,9 @@
             <Grid x:Name="gridCoin">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition Width="0.2*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -89,12 +92,6 @@
                     <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBox" Margin="10, 10, 10, 10" ItemsSource="{Binding}" Height="Auto">
                         <ListBox.Background>
                             <ImageBrush ImageSource="C:\Users\kalil\source\repos\BSUIR-SVPP-Labs\WPF_Laba7\Resources\white.jpg" Opacity="0.39"></ImageBrush>
-                            <!--<ImageBrush ImageSource="pack://application:,,,/Resources/abstr.jpg"/>-->
-
-
-                            <!--<ImageBrush ImageSource="pack://application:,,,/Resources/abstr.jpg"/>-->
-
-                            <!--<ImageBrush ImageSource="C:\Users\kalil\Desktop\background.jpg"/>-->
                         </ListBox.Background>
                     </ListBox> 
                 </Border>
