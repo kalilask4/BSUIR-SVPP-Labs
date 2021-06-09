@@ -61,6 +61,32 @@ namespace WPF_Laba7.Entities
             connection.Close();
         }
 
+        public void Update()
+        {
+            newConnection();
+            var commandString = "UPDATE Coin SET Amount=@amount, CrtPrice=@crtPrice, CrtCost=@crtCost " +
+                "WHERE (Title=@Title)";
+            SqlCommand updateCommand = new SqlCommand(commandString, connection);
+            updateCommand.Parameters.AddRange(new SqlParameter[]
+                {
+                    new SqlParameter("Coinid", CoinId),
+                    new SqlParameter("Title", Title),
+                    new SqlParameter("Amount", Amount),
+                    new SqlParameter("CrtPrice", CrtPrice),
+                    new SqlParameter("CrtCost", CrtCost),
+                });
+            updateCommand.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void UpdateCoin(Coin coinNew)
+        {
+            //if (coinNew.Title?.Length > 0) Title = coinNew.Title;
+            if (coinNew.Amount >= 0) Amount = coinNew.Amount;
+            if (coinNew.CrtPrice >= 0) CrtPrice = coinNew.CrtPrice;
+            if (coinNew.CrtCost >= 0) CrtCost = coinNew.CrtCost;
+        }
+
         public static Coin Find(string title)
         {
             foreach (var coin in getAllCoin())

@@ -35,6 +35,17 @@ namespace WPF_Laba7
 
         }
 
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBox.SelectedIndex < 0)
+                return;
+            Coin coinUpdate = (Coin)listBox.SelectedItem;
+            coinUpdate.UpdateCoin(coin);
+            coinUpdate.Update();
+            FillData();
+
+        }
+
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
             Coin coinFind = Coin.Find(textBoxTitle.Text);
