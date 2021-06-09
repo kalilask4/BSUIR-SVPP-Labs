@@ -79,10 +79,10 @@
                 <Label Grid.Column="0" Grid.Row="1">Amount</Label>
                 <TextBox x:Name="textBoxAmount" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Amount}"></TextBox>
 
-                <Label Grid.Column="2" Grid.Row="0" >CrtPrice</Label>
+                <Label Grid.Column="2" Grid.Row="0" >Current Price</Label>
                 <TextBox x:Name="textBoxCrtPrice" Grid.Column="3" Grid.Row="0" Text="{Binding Path=CrtPrice}"></TextBox>
 
-                <Label Grid.Column="2" Grid.Row="1">CrtCost</Label>
+                <Label Grid.Column="2" Grid.Row="1">Current Cost</Label>
                 <TextBox x:Name="textBoxCrtCost" Grid.Column="3" Grid.Row="1" Text="{Binding Path=CrtCost}"></TextBox>
 
                 <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6" Margin="7, 7, 7, 7">
