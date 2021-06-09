@@ -61,6 +61,16 @@ namespace WPF_Laba7.Entities
             connection.Close();
         }
 
+        public static Coin Find(string title)
+        {
+            foreach (var coin in getAllCoin())
+            {
+                if (coin.Title == title)
+                    return coin;
+            }
+            return null;
+        }
+
         public void Insert()
         {
             newConnection();
@@ -87,8 +97,6 @@ namespace WPF_Laba7.Entities
             sqlCommand.ExecuteNonQuery(); //запрос выполняется не возвращая данные
             connection.Close();
         }
-
-
 
 
         public override string ToString()

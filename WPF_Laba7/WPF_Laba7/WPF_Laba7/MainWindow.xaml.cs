@@ -35,6 +35,15 @@ namespace WPF_Laba7
 
         }
 
+        private void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+            Coin coinFind = Coin.Find(textBoxTitle.Text);
+            if (coinFind == null)
+                MessageBox.Show("Nothing found.");
+            else
+                MessageBox.Show(coinFind.ToString());
+        }
+
         private void btnShow_Click(object sender, RoutedEventArgs e)
         {
             FillData();

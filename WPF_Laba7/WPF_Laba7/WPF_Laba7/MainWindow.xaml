@@ -46,7 +46,7 @@
             <StackPanel Grid.Column="0" VerticalAlignment="Center">
             <Button Name="btnShow"  Content="Show" Click="btnShow_Click" />
             <Button Name="btnInsert" Content="Insert" Click="btnInsert_Click"/>
-                <Button Name="btnFind" Content="Find"/>
+            <Button Name="btnFind" Content="Find" Click="btnFind_Click"/>
                 <Button Name="btnUpdate"  Content="Update"/>
                 <Button Name="btnDelete" Content="Delete" Click="btnDelete_Click"/>
             </StackPanel>
