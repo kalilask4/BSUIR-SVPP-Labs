@@ -24,5 +24,21 @@ namespace WPF_Laba8_EF
         {
             InitializeComponent();
         }
+
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
