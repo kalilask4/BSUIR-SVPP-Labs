@@ -10,7 +10,9 @@ namespace WPF_Laba8_EF.Models
     class EntityContext:DbContext
     {
         public EntityContext(): base("DefaultConnection")
-        {}
+        {
+            Database.SetInitializer(new DataBaseInitializer());
+        }
         public DbSet<Student> Students { get; set; }
     }
 
