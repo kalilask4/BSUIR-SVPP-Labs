@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Laba8_EF
 {
-    class Student
+    public class Student
     {
         public int StudentId { get; set; }
         public String Fullname { get; set; }
