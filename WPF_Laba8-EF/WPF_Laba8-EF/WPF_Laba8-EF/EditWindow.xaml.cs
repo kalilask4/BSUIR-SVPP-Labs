@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_Laba8_EF.Models;
+
 
 namespace WPF_Laba8_EF
 {
@@ -19,18 +21,26 @@ namespace WPF_Laba8_EF
     /// </summary>
     public partial class EditWindow : Window
     {
-        public EditWindow()
+
+        Student student;
+        
+        public EditWindow(Student student)
         {
+
             InitializeComponent();
+            this.student = student;
+            grid.DataContext = student;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnOk_Click(object sender, RoutedEventArgs e)
         {
+            this.DialogResult = true;
 
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
 
         }
     }

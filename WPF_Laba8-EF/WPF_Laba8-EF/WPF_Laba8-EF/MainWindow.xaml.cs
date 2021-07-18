@@ -36,7 +36,15 @@ namespace WPF_Laba8_EF
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            Student student = new Student();
+            EditWindow ew = new EditWindow(student);
+            var result = ew.ShowDialog();
+            if (result == true)
+            {
+                db.Students.Add(student);
+                db.SaveChanges();
+                ew.Close();
+            }
         }
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
