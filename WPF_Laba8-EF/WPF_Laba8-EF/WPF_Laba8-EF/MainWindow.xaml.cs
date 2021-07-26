@@ -66,7 +66,24 @@ namespace WPF_Laba8_EF
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            db.SaveChanges();
+            Student student = dGrid.SelectedItem as Student;
+            EditWindow ew = new EditWindow(student);
+            var result = ew.ShowDialog();
+            if (result == true)
+            {
+                db.SaveChanges();
+                ew.Close();
+
+            }
+            else
+            {
+                db.Entry(student).Reload();
+                dGrid.DataContext = null;
+                dGrid.DataContext = db.Students.Local;
+                db.SaveChanges();
+                ew.Close();
+
+            }
         }
     }
 }
