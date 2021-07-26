@@ -1,0 +1,7 @@
+﻿create prj
+NuGet - EntityFramework
+add Connection string
+add Reference - System.Configuration
+add dir Entities + add Entity classes 
+add dir EFContext + Context classes, and class-initializer 
+
