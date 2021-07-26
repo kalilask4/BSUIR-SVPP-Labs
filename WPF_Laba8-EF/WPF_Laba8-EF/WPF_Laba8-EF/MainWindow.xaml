@@ -27,7 +27,6 @@
             <Button x:Name="btnEdit" Click="btnEdit_Click">
                 Edit student
             </Button>
-
         </StackPanel>
     </Grid>
 </Window>

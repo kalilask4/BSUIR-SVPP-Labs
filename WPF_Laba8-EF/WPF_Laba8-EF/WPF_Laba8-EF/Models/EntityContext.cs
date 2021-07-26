@@ -15,5 +15,4 @@ namespace WPF_Laba8_EF.Models
         }
         public DbSet<Student> Students { get; set; }
     }
-
 }

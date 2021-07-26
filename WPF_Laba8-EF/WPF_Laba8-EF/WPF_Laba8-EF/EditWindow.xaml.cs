@@ -26,7 +26,6 @@ namespace WPF_Laba8_EF
         
         public EditWindow(Student student)
         {
-
             InitializeComponent();
             this.student = student;
             grid.DataContext = student;
@@ -35,13 +34,11 @@ namespace WPF_Laba8_EF
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
-
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-
         }
     }
 }

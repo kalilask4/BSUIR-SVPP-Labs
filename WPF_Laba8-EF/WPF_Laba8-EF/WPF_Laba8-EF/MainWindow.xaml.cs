@@ -29,10 +29,9 @@ namespace WPF_Laba8_EF
             InitializeComponent();
             db = new EntityContext();
             db.Students.Load();
-            dGrid.ItemsSource = db.Students.Local.ToBindingList();
+             dGrid.ItemsSource = db.Students.Local.ToBindingList();
 
         }
-
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -56,7 +55,7 @@ namespace WPF_Laba8_EF
                 db.Students.Remove(student);
                 db.SaveChanges();
             }
-            //deleting all inserting block
+            //for del all from block inserted
             //if (dGrid.SelectedItems.Count > 0)
             //{
             //    for(int i = 0; i < dGrid.SelectedItems.Count; i++)
@@ -69,7 +68,6 @@ namespace WPF_Laba8_EF
             //    }
             //}
             //db.SaveChanges();
-
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -81,7 +79,6 @@ namespace WPF_Laba8_EF
             {
                 db.SaveChanges();
                 ew.Close();
-
             }
             else
             {
@@ -90,7 +87,6 @@ namespace WPF_Laba8_EF
                 dGrid.DataContext = db.Students.Local;
                 db.SaveChanges();
                 ew.Close();
-
             }
         }
     }
