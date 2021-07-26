@@ -14,7 +14,10 @@ namespace WPF_Lab9.EFContext
         public DbSet<Group> groups { get; set; }
 
         public CoursesContext()
-        { }
+        {
+            Database.SetInitializer(new CoursesInitialiser());
+                
+        }
 
 
     }
