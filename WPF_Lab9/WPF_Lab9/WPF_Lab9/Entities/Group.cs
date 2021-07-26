@@ -8,5 +8,17 @@ namespace WPF_Lab9.Entities
 {
     class Group
     {
+
+
+        public int GroupId{ get; set;}
+        public string CourseName { get; set; }
+        public DateTime Commence { get; set; }
+        public decimal BasePrice { get; set; }
+        public List<Student> students { get; set; }
+        
+        public Group()
+        {
+            students = new List<Student>();
+        }
     }
 }
