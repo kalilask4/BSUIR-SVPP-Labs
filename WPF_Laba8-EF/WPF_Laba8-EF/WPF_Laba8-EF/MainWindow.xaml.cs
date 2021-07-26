@@ -49,18 +49,26 @@ namespace WPF_Laba8_EF
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
-            if (dGrid.SelectedItems.Count > 0)
+            var result = MessageBox.Show("Вы уверены?", "Удалить запись?", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
             {
-                for(int i = 0; i < dGrid.SelectedItems.Count; i++)
-                {
-                    Student student = dGrid.SelectedItems[i] as Student;
-                    if(student != null)
-                    {
-                        db.Students.Remove(student);
-                    }
-                }
+                Student student = dGrid.SelectedItem as Student;
+                db.Students.Remove(student);
+                db.SaveChanges();
             }
-            db.SaveChanges();
+            //deleting all inserting block
+            //if (dGrid.SelectedItems.Count > 0)
+            //{
+            //    for(int i = 0; i < dGrid.SelectedItems.Count; i++)
+            //    {
+            //        Student student = dGrid.SelectedItems[i] as Student;
+            //        if(student != null)
+            //        {
+            //            db.Students.Remove(student);
+            //        }
+            //    }
+            //}
+            //db.SaveChanges();
 
         }
 
