@@ -1,4 +1,5 @@
-﻿create prj
+﻿9
+create prj
 NuGet - EntityFramework
 add Connection string
 add Reference - System.Configuration
@@ -7,5 +8,13 @@ add dir EFContext + Context classes,
 class-bdinitializer 
 add class-bdinitializer to constructor to Context
 design, ToBindingList
+
+need classes: models, context,reposytory, interface
+10
+create prj - class library(.net Framework). Name WPF-lab10.
+add App.config, write connectionString
+NuGet - add EntityFramework 
+add dir Entities, Interfaces, Repositories, EFContext
+
 
 
