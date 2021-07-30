@@ -3,5 +3,9 @@ NuGet - EntityFramework
 add Connection string
 add Reference - System.Configuration
 add dir Entities + add Entity classes 
-add dir EFContext + Context classes, and class-initializer 
+add dir EFContext + Context classes, 
+class-bdinitializer 
+add class-bdinitializer to constructor to Context
+design, ToBindingList
+
 
