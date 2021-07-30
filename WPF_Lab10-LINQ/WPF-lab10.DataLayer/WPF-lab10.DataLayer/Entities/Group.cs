@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_lab10.DataLayer.EFContext
+namespace WPF_lab10.DataLayer.Entities
 {
     class Group
     {
