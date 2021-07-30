@@ -20,6 +20,7 @@ mono_crash.*
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
+
 [Rr]eleases/
 x64/
 x86/
@@ -364,3 +365,4 @@ WPF_Laba8-10-test
 WPF_Laba8-10-test2
 todo.txt
 del.txt
+lab09-del/*

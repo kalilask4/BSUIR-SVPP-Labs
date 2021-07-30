@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WPF_Laba8_EF"
         mc:Ignorable="d"
         Title="EditWindow" Height="450" Width="800">
+
     <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition/>

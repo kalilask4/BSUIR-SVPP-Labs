@@ -12,13 +12,13 @@ namespace WPF_Lab9.EFContext
     {
         public DbSet<Student> students { get; set; }
         public DbSet<Group> groups { get; set; }
-
         public CoursesContext()
         {
-            Database.SetInitializer(new CoursesInitialiser());
-                
+            Database.SetInitializer(new CoursesInitializer());
         }
 
 
     }
 }
+
+

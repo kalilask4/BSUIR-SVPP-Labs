@@ -8,7 +8,7 @@ using WPF_Lab9.Entities;
 
 namespace WPF_Lab9.EFContext
 {
-    class CoursesInitialiser:CreateDatabaseIfNotExists<CoursesContext>
+    class CoursesInitializer:CreateDatabaseIfNotExists<CoursesContext>
     {
         protected override void Seed(CoursesContext context)
         {
@@ -16,7 +16,8 @@ namespace WPF_Lab9.EFContext
             {
                 new Group
                 {
-                    BasePrice = 100, Commence = new DateTime(2021,01,21),
+                    BasePrice = 100, 
+                    Commence = new DateTime(2021,01,21),
                     CourseName = "Знакомство с Adobe Photoshop",
                     students = new List<Student>
                     {
