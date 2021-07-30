@@ -10,9 +10,8 @@ namespace WPF_lab10.DataLayer.Interfaces
     {
         void Create(T t);
         void Update(T t);
-        void Delete(T t);
-        T Get(T t);
         void Delete(int id);
+        T Get(int id);
         IEnumerable<T> GetAll();
         IEnumerable<T> Find(Func<T, bool> predicate);
     }

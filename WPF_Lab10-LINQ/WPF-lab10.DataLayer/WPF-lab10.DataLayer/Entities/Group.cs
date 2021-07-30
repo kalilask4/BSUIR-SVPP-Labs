@@ -12,11 +12,11 @@ namespace WPF_lab10.DataLayer.Entities
         public string CourseName { get; set; }
         public DateTime Commence { get; set; }
         public decimal BasePrice { get; set; }
-        public List<Student> students { get; set; }
+        public List<Student> Students { get; set; }
 
         public Group()
         {
-            students = new List<Student>();
+            Students = new List<Student>();
         }
     }
 }

@@ -13,14 +13,14 @@ namespace WPF_lab10.DataLayer.EFContext
     {
         protected override void Seed(CoursesContext context)
         {
-            context.groups.AddRange(new Group[]
+            context.Groups.AddRange(new Group[]
             {
                 new Group
                 {
                     BasePrice = 100,
                     Commence = new DateTime(2021,01,21),
                     CourseName = "Знакомство с Adobe Photoshop",
-                    students = new List<Student>
+                    Students = new List<Student>
                     {
                         new Student
                         {
@@ -43,7 +43,7 @@ namespace WPF_lab10.DataLayer.EFContext
                 {
                     BasePrice = 100, Commence = new DateTime(2020,05,29),
                     CourseName = "Python. Professional lvl",
-                    students = new List<Student>
+                    Students = new List<Student>
                     {
                         new Student
                         {
