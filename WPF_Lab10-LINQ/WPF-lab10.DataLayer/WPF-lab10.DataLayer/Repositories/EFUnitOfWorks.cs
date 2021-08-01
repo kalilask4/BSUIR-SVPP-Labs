@@ -21,7 +21,7 @@ namespace WPF_lab10.DataLayer.Repositories
             context = new CoursesContext(nameStringConnection);
         }
 
-        //
+        //pattern Singlton
         public IRepository<Group> Groups
         {
             get

@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_lab10.DataLayer.Entities
+namespace WPF_lab10.BusinessLayer.Model
 {
-    public class Student
+    public class StudentViewModel
     {
+      
         public int StudentId { get; set; }
         public string FullName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public decimal IndividualPrice { get; set; }
         public string FileName { get; set; } //photo file
-        public int GroupId { get; set; }
-        public Group group { get; set; }
+        public bool HasDiscont { get; set; }
+
+
+
     }
 }
