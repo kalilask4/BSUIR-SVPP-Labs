@@ -20,6 +20,8 @@ add interface and classes for every model (+implement)
 pattern Unit of Work
 add new prj - class library(.net Framework). Name WPF-lab10.BusinessLayer
 for BusinessLayer add reference to prj DataLayer
+add dirs Interfaces, Models, Services
+add interfase IGroupService
 
 
 
