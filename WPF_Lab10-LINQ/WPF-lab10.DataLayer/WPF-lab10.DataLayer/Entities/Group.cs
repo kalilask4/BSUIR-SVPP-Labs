@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_lab10.DataLayer.Entities
 {
-    class Group
+    public class Group
     {
         public int GroupId { get; set; }
         public string CourseName { get; set; }

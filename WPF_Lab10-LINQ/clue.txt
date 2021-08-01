@@ -17,6 +17,7 @@ NuGet - add EntityFramework
 add dir Entities, Interfaces, Repositories, EFContext
 add entities, add context
 add interface and classes for every model (+implement)
+pattern Unit of Work
 
 
 

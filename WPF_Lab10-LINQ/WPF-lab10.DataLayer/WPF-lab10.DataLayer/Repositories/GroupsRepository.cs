@@ -14,6 +14,11 @@ namespace WPF_lab10.DataLayer.Repositories
     {
         CoursesContext context;
 
+        public GroupsRepository(CoursesContext context)
+        {
+            this.context = context;
+        }
+
         public void Create(Group t)
         {
             context.Groups.Add(t);
