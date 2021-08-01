@@ -43,9 +43,24 @@ namespace WPF_lab10.DataLayer.Repositories
             }
         }
 
-        public void Dispose()
+        private bool disposed = false;
+        public virtual void Dispose(bool disposing)
         {
-            throw new NotImplementedException();
+            if (!this.disposed)
+            {
+                if(disposing)
+                {
+                    context.Dispose();
+                }
+                disposed = true;
+
+            }
+        }
+
+        public  void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         public void Save()
