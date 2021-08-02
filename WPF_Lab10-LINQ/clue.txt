@@ -23,6 +23,8 @@ for BusinessLayer add reference to prj DataLayer
 add dirs Interfaces, Models, Services
 add interfase IGroupService
 NuGet, add AutoMapper
+add GroupService
+add prg - WPF. Name - lab10
 
 
 
