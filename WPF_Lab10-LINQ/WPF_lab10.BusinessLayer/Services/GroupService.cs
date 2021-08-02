@@ -15,15 +15,15 @@ namespace WPF_lab10.BusinessLayer.Services
 {
     class GroupService : IGroupService
     {
-        IUnitOfWork database;
+        IUnitOfWork dataBase;
 
         public GroupService(string nameStringConnection)
         {
-            database = new EFUnitOfWorks(nameStringConnection);
+            dataBase = new EFUnitOfWorks(nameStringConnection);
         }
         public void AddStudentToGroup(int groupId, StudentViewModel studentViewModel)
         {
-            var group = database.Groups.Get(groupId);
+            var group = dataBase.Groups.Get(groupId);
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentViewModel>());
             var mapper = new Mapper(config);
             var student = mapper.Map<StudentViewModel, Student>(studentViewModel);
@@ -31,7 +31,7 @@ namespace WPF_lab10.BusinessLayer.Services
                 ? group.BasePrice * (decimal)0.8
                 : group.BasePrice;
             group.Students.Add(student);
-            database.Save();
+            dataBase.Save();
         }
 
         public void CreateGroup(GroupViewModel group)
@@ -51,7 +51,15 @@ namespace WPF_lab10.BusinessLayer.Services
 
         public ObservableCollection<GroupViewModel> GetAll()
         {
-            throw new NotImplementedException();
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Student, StudentViewModel>();
+                cfg.CreateMap<Group, GroupViewModel>();
+            });
+            var mapper = new Mapper(config);
+            var groups = mapper.Map<IEnumerable<Group>,
+                ObservableCollection<GroupViewModel>>(dataBase.Groups.GetAll());
+            return groups;
         }
 
         public void RemoveStudentFromGroup(int groupId, int studentId)
