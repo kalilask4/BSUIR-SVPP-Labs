@@ -13,7 +13,7 @@ need classes: models, context,reposytory, interface
 10
 create prj - class library(.net Framework). Name WPF-lab10.DataLayer
 add App.config, write connectionString
-NuGet - add EntityFramework 
+NuGet, add EntityFramework 
 add dir Entities, Interfaces, Repositories, EFContext
 add entities, add context
 add interface and classes for every model (+implement)
@@ -22,6 +22,7 @@ add new prj - class library(.net Framework). Name WPF-lab10.BusinessLayer
 for BusinessLayer add reference to prj DataLayer
 add dirs Interfaces, Models, Services
 add interfase IGroupService
+NuGet, add AutoMapper
 
 
 
