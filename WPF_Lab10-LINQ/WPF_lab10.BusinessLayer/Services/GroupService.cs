@@ -13,13 +13,13 @@ using WPF_lab10.DataLayer.Repositories;
 
 namespace WPF_lab10.BusinessLayer.Services
 {
-    class GroupService : IGroupService
+    public class GroupService : IGroupService
     {
         IUnitOfWork dataBase;
 
-        public GroupService(string nameStringConnection)
+        public GroupService(string namebd)
         {
-            dataBase = new EFUnitOfWorks(nameStringConnection);
+            dataBase = new EFUnitOfWorks(namebd);   //разобраться!! здесь не имя строки подключения, а имя бд
         }
         public void AddStudentToGroup(int groupId, StudentViewModel studentViewModel)
         {
@@ -28,7 +28,7 @@ namespace WPF_lab10.BusinessLayer.Services
             var mapper = new Mapper(config);
             var student = mapper.Map<StudentViewModel, Student>(studentViewModel);
             student.IndividualPrice = studentViewModel.HasDiscont
-                ? group.BasePrice * (decimal)0.8
+                ? group.BasePrice * 0.8M //(decimal)0.8 - the same
                 : group.BasePrice;
             group.Students.Add(student);
             dataBase.Save();

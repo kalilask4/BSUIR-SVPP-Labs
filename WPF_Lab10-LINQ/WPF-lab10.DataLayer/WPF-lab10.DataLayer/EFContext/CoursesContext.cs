@@ -13,9 +13,11 @@ class CoursesContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
         public DbSet<Group> Groups { get; set; }
+
         public CoursesContext()
         {
             Database.SetInitializer(new CoursesInitializer());
+            
         }
 
 

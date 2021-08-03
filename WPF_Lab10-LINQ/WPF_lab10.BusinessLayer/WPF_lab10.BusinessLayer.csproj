@@ -48,6 +48,7 @@
     <Compile Include="Model\GroupViewModel.cs" />
     <Compile Include="Model\StudentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GroupService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WPF-lab10.DataLayer\WPF-lab10.DataLayer\WPF-lab10.DataLayer.csproj">
@@ -55,9 +56,7 @@
       <Name>WPF-lab10.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
