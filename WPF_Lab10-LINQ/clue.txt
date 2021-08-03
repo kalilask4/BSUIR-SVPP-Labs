@@ -24,7 +24,14 @@ add dirs Interfaces, Models, Services
 add interfase IGroupService
 NuGet, add AutoMapper
 add GroupService
-add prg - WPF. Name - lab10
+add prg - WPF. Name - lab10, set as a start prj
+NuGet, add EntityFramework 
+add reference to BusinessLayer
+desing
+build project
+!!add coments!!   EF, Singlton, UnitOfWorks, Mapping
+
+
 
 
 
