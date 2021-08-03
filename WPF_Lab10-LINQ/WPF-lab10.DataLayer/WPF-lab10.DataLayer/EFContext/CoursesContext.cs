@@ -14,12 +14,9 @@ class CoursesContext : DbContext
         public DbSet<Student> Students { get; set; }
         public DbSet<Group> Groups { get; set; }
 
-        public CoursesContext()
+        public CoursesContext(string name): base(name)
         {
             Database.SetInitializer(new CoursesInitializer());
-            
         }
-
-
     }
 }
