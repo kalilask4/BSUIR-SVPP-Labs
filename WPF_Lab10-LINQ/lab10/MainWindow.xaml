@@ -42,12 +42,28 @@
                 Path=SelectedItem.BasePrice,
                 StringFormat={}{0} руб.}"/>
         </Grid>
-        <DataGrid x:Name="tempGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding}"/>
-
-
-
-
-
-
+        <!--<DataGrid x:Name="tempGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding}"/>-->
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
+            <ListBox DataContext="{Binding ElementName=cBoxGroup, Path=SelectedItem}"
+                     ItemsSource="{Binding Path=Students}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                  <ColumnDefinition Width="auto"></ColumnDefinition>
+                                  <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Width="50" Source="{Binding Path=Filename}"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="{Binding Path=FullNmae}" Margin="30,0,0,0"/>
+                                <TextBlock Text="{Binding Path=DateOfBirth,
+                                    StringFormat={}{0:dd.MM.yyyy г.р.}}"
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
     </Grid>
 </Window>
