@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab10"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontFamily="Lucida Bright" FontSize="22">
-    <Grid Margin="10">
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -18,7 +18,7 @@
         <StackPanel>
             <TextBlock>Выберите группу:</TextBlock>
             <ComboBox x:Name="cBoxGroup" Margin= "10,10,10,10"
-                      DisplayMemberPath="CoursrName"
+                      DisplayMemberPath="CourseName"
                       ItemsSource="{Binding}"
                       SelectedValuePath="GroupId"
                       SelectedIndex="0"/>
@@ -53,9 +53,9 @@
                                   <ColumnDefinition Width="auto"></ColumnDefinition>
                                   <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Image Width="50" Source="{Binding Path=Filename}"/>
+                            <Image Width="50" Source="{Binding Path=FileName}"/>
                             <StackPanel Grid.Column="1">
-                                <TextBlock Text="{Binding Path=FullNmae}" Margin="30,0,0,0"/>
+                                <TextBlock Text="{Binding Path=FullName}" Margin="30,0,0,0"/>
                                 <TextBlock Text="{Binding Path=DateOfBirth,
                                     StringFormat={}{0:dd.MM.yyyy г.р.}}"
                                            Margin="30,0,0,0"/>

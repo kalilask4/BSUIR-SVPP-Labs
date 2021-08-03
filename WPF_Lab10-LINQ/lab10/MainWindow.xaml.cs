@@ -31,7 +31,7 @@ namespace lab10
         {
             
             InitializeComponent();
-            groupService = new GroupService("CoursesContext");
+            groupService = new GroupService("db10");
             groups = groupService.GetAll();
             cBoxGroup.DataContext = groups;
            

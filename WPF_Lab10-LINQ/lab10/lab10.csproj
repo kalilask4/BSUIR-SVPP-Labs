@@ -105,6 +105,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WPF_lab10.BusinessLayer\WPF_lab10.BusinessLayer.csproj">
+      <Project>{6ed899a3-aba1-4adc-a9c3-4cd56072c065}</Project>
+      <Name>WPF_lab10.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
