@@ -56,7 +56,15 @@ namespace lab10
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            GroupViewModel groupViewModel = new GroupViewModel();
+            groupViewModel.Commence = new DateTime(1990, 01, 01);
+            EditGroup dialog = new EditGroup(groupViewModel);
+            var result = dialog.ShowDialog();
+            if (result == true)
+                groupService.CreateGroup(groupViewModel);
+            groups = groupService.GetAll();
+            cBoxGroup.DataContext = groups;
+            cBoxGroup.SelectedIndex = 0;
         }
     }
 }
