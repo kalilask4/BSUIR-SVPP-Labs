@@ -27,7 +27,7 @@
                       ItemsSource="{Binding}"
                       SelectedValuePath="GroupId"
                       SelectedIndex="0"/>
-            <Button Margin="10" Content="Добавить студента" Click="Button_Click"/>
+            <Button x:Name="btnAddStudent" Margin="10" Content="Добавить студента" Click="btnAddStudent_Click" />
         </StackPanel>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

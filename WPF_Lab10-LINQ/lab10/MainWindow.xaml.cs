@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab10.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -37,9 +38,16 @@ namespace lab10
            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnAddStudent_Click(object sender, RoutedEventArgs e)
         {
+            var studentViewModel = new StudentViewModel();
+            studentViewModel.DateOfBirth = new DateTime(1990, 01, 01);
+            var dialog = new EditStudent(studentViewModel);
+            var result = dialog.ShowDialog();
+            if (result == true)
+            {
 
+            }
         }
     }
 }
