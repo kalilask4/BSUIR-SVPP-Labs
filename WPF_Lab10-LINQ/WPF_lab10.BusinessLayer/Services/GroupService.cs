@@ -45,7 +45,9 @@ namespace WPF_lab10.BusinessLayer.Services
 
         public void DeleteGroup(int groupId)
         {
-            throw new NotImplementedException();
+
+            dataBase.Groups.Delete(groupId);
+            dataBase.Save();
         }
 
         public GroupViewModel Get(int id)

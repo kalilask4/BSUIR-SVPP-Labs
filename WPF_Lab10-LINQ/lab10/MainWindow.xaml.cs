@@ -66,5 +66,19 @@ namespace lab10
             cBoxGroup.DataContext = groups;
             cBoxGroup.SelectedIndex = 0;
         }
+
+        private void cBoxGroup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Delete)
+            {
+                if (cBoxGroup.SelectedIndex < 0)
+                    return;
+                groupService.DeleteGroup((cBoxGroup.SelectedItem as GroupViewModel).GroupId);
+                groups = groupService.GetAll();
+                cBoxGroup.DataContext = groups;
+                cBoxGroup.SelectedIndex = 0;
+            }
+
+        }
     }
 }

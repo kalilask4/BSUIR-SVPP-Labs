@@ -26,7 +26,7 @@
                       DisplayMemberPath="CourseName"
                       ItemsSource="{Binding}"
                       SelectedValuePath="GroupId"
-                      SelectedIndex="0"/>
+                      SelectedIndex="0" KeyDown="cBoxGroup_KeyDown"/>
             <Button x:Name="btnAddStudent" Margin="10" Content="Добавить студента" Click="btnAddStudent_Click" />
         </StackPanel>
         <Grid Grid.Column="1">
