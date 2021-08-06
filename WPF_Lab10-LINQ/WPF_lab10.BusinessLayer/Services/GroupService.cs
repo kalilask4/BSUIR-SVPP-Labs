@@ -34,9 +34,13 @@ namespace WPF_lab10.BusinessLayer.Services
             dataBase.Save();
         }
 
-        public void CreateGroup(GroupViewModel group)
+        public void CreateGroup(GroupViewModel groupViewModel)
         {
-            throw new NotImplementedException();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap < GroupViewModel, Group>());
+            var mapper = new Mapper(config);
+            Group group = mapper.Map<GroupViewModel, Group>(groupViewModel);
+            dataBase.Groups.Create(group);
+            dataBase.Save();
         }
 
         public void DeleteGroup(int groupId)
