@@ -35,12 +35,14 @@ namespace lab10.Dialogs
                 studentViewModel.DateOfBirth = (DateTime)dpStudent.SelectedDate;
             if (checkBoxDiscount.IsChecked != null)
                 studentViewModel.HasDiscont = (bool)checkBoxDiscount.IsChecked;
-            MessageBox.Show($"{studentViewModel.FullName}{studentViewModel.DateOfBirth}{studentViewModel.HasDiscont}{studentViewModel.FileName}");
+            //MessageBox.Show($"{studentViewModel.FullName}{studentViewModel.DateOfBirth}{studentViewModel.HasDiscont}{studentViewModel.FileName}");
+            this.DialogResult = true;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DialogResult = false;
+            this.Close();
         }
     }
 }

@@ -21,7 +21,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock>Выберите группу:</TextBlock>
+            <TextBlock MouseDown="TextBlock_MouseDown">Выберите группу:</TextBlock>
             <ComboBox x:Name="cBoxGroup" Margin= "10,10,10,10"
                       DisplayMemberPath="CourseName"
                       ItemsSource="{Binding}"

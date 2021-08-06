@@ -46,8 +46,17 @@ namespace lab10
             var result = dialog.ShowDialog();
             if (result == true)
             {
+                var group = (GroupViewModel)cBoxGroup.SelectedItem;
+                group.Students.Add(studentViewModel);
+                groupService.AddStudentToGroup(group.GroupId, studentViewModel);
+                dialog.Close();
 
             }
+        }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
