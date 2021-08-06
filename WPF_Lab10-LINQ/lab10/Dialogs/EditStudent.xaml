@@ -27,7 +27,7 @@
                    SelectedDate="{Binding Path=DateOfBirth}"
                    Grid.Column="1"/>
         <Label Content="Скидка" Grid.Row="2"/>
-        <CheckBox Grid.Row="2" Margin="25 15"
+        <CheckBox x:Name="checkBoxDiscount" Grid.Row="2" Margin="25 15"
                    IsChecked="{Binding Path=HasDiscount}"
                    Grid.Column="1" Height="54"/>
         <Label Content="Файл изображения" Grid.Row="3"/>

@@ -31,6 +31,10 @@ namespace lab10.Dialogs
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
+            if (dpStudent.SelectedDate != null)
+                studentViewModel.DateOfBirth = (DateTime)dpStudent.SelectedDate;
+            if (checkBoxDiscount.IsChecked != null)
+                studentViewModel.HasDiscont = (bool)checkBoxDiscount.IsChecked;
             MessageBox.Show($"{studentViewModel.FullName}{studentViewModel.DateOfBirth}{studentViewModel.HasDiscont}{studentViewModel.FileName}");
         }
 
