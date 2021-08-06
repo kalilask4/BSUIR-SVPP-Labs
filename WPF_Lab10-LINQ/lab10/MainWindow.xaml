@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab10"
+        xmlns:inf="clr-namespace:lab10.Infrastucture"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <inf:ImageSourceConverter x:Key="ImageConverter"/>
+    </Window.Resources>
+ 
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -53,7 +58,8 @@
                                   <ColumnDefinition Width="auto"></ColumnDefinition>
                                   <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Image Width="50" Source="{Binding Path=FileName}"/>
+                            <Image Width="50" Source="{Binding Path=FileName, 
+                                Converter={StaticResource ImageConverter}}"/>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="{Binding Path=FullName}" Margin="30,0,0,0"/>
                                 <TextBlock Text="{Binding Path=DateOfBirth,

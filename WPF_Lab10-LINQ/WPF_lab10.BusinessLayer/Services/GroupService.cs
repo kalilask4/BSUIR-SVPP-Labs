@@ -24,7 +24,7 @@ namespace WPF_lab10.BusinessLayer.Services
         public void AddStudentToGroup(int groupId, StudentViewModel studentViewModel)
         {
             var group = dataBase.Groups.Get(groupId);
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentViewModel>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentViewModel, Student>());
             var mapper = new Mapper(config);
             var student = mapper.Map<StudentViewModel, Student>(studentViewModel);
             student.IndividualPrice = studentViewModel.HasDiscont

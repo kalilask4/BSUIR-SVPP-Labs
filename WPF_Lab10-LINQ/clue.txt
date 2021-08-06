@@ -29,7 +29,10 @@ NuGet, add EntityFramework
 add reference to BusinessLayer
 desing
 build project
-!!add coments!!   EF, Singlton, UnitOfWorks, Mapping
+   !!add coments!!   EF, Singlton, UnitOfWorks, Mapping
+add dir Images and images
+add dir Infrastucture
+
 
 
 
