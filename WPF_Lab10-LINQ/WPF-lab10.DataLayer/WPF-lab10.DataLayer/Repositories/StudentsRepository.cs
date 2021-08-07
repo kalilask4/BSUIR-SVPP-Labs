@@ -47,7 +47,12 @@ namespace WPF_lab10.DataLayer.Repositories
 
         public void Update(Student t)
         {
-            context.Entry<Student>(t).State = EntityState.Modified;
+            //context.Entry<Student>(t).State = EntityState.Modified;
+            var student = context.Students.Find(t.StudentId);
+            student.FullName = t.FullName;
+            student.DateOfBirth = t.DateOfBirth;
+            student.IndividualPrice = t.IndividualPrice;
+            student.FileName = t.FileName;
         }
     }
 }

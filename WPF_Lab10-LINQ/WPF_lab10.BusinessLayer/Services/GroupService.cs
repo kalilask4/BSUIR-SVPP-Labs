@@ -82,5 +82,14 @@ namespace WPF_lab10.BusinessLayer.Services
             dataBase.Groups.Update(group);
             dataBase.Save();
         }
+
+        public void UpdateStudent(StudentViewModel studentViewModel)
+        {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentViewModel, Student>());
+            var mapper = new Mapper(config);
+            Student student = mapper.Map<StudentViewModel, Student>(studentViewModel);
+            dataBase.Students.Update(student);
+            dataBase.Save();
+        }
     }
 }

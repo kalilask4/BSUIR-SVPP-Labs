@@ -111,7 +111,20 @@ namespace lab10
                 cBoxGroup.DataContext = groups;
                 cBoxGroup.SelectedItem = 0;
             }
+            if (e.Key == Key.Insert)
+            {
+                if (lbStudentsinGroup.SelectedIndex < 0)
+                    return;
+                StudentViewModel studentViewModel = lbStudentsinGroup.SelectedItem as StudentViewModel;
+                var dialog = new EditStudent(studentViewModel);
+                var result = dialog.ShowDialog();
+                if(result == true)
+                {
+                    groupService.UpdateStudent(studentViewModel);
+                    dialog.Close();
+                }
 
+            }
         }
     }
 }

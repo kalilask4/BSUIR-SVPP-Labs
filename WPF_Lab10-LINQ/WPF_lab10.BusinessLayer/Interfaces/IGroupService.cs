@@ -17,5 +17,6 @@ namespace WPF_lab10.BusinessLayer.Interfaces
         void CreateGroup(GroupViewModel group);
         void DeleteGroup(int groupId);
         void UpdateGroup(GroupViewModel group);
+        void UpdateStudent(StudentViewModel studentViewModel);
     }
 }
