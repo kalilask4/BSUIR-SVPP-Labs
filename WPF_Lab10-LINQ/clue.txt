@@ -32,7 +32,7 @@ build project
    !!add coments!!   EF, Singlton, UnitOfWorks, Mapping
 add dir Images and images
 add dir Infrastucture
-
+add functions: delete, insert, update
 
 
 
