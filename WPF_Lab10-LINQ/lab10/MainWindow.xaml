@@ -49,8 +49,8 @@
         </Grid>
         <!--<DataGrid x:Name="tempGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding}"/>-->
         <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
-            <ListBox DataContext="{Binding ElementName=cBoxGroup, Path=SelectedItem}"
-                     ItemsSource="{Binding Path=Students}">
+            <ListBox x:Name="lbStudentsinGroup" DataContext="{Binding ElementName=cBoxGroup, Path=SelectedItem}"
+                     ItemsSource="{Binding Path=Students}" KeyDown="lbStudentsinGroup_KeyDown">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Margin="10">

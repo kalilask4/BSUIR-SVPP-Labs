@@ -69,7 +69,7 @@ namespace lab10
 
         private void cBoxGroup_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Delete)
+            if (e.Key == Key.Delete)
             {
                 if (cBoxGroup.SelectedIndex < 0)
                     return;
@@ -77,6 +77,39 @@ namespace lab10
                 groups = groupService.GetAll();
                 cBoxGroup.DataContext = groups;
                 cBoxGroup.SelectedIndex = 0;
+            }
+            if (e.Key == Key.Insert)
+            {
+                if (cBoxGroup.SelectedIndex < 0)
+                    return;
+
+                GroupViewModel groupViewModel = cBoxGroup.SelectedItem as GroupViewModel;
+                EditGroup dialog = new EditGroup(groupViewModel);
+                var result = dialog.ShowDialog();
+                if (result == true)
+                {
+                    groupService.UpdateGroup(groupViewModel);
+                    groups = groupService.GetAll();
+                    cBoxGroup.DataContext = groups;
+                    cBoxGroup.SelectedIndex = 0;
+                }
+            }
+        }
+
+
+        private void lbStudentsinGroup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete)
+            {
+                if (lbStudentsinGroup.SelectedIndex < 0)
+                    return;
+                int si = cBoxGroup.SelectedIndex;
+                GroupViewModel groupViewModel = cBoxGroup.SelectedItem as GroupViewModel;
+                StudentViewModel studentViewModel = lbStudentsinGroup.SelectedItem as StudentViewModel;
+                groupService.RemoveStudentFromGroup(groupViewModel.GroupId, studentViewModel.StudentId);
+                groups = groupService.GetAll();
+                cBoxGroup.DataContext = groups;
+                cBoxGroup.SelectedItem = 0;
             }
 
         }

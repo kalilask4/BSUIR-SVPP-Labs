@@ -54,7 +54,11 @@ namespace WPF_lab10.DataLayer.Repositories
 
         public void Update(Group t)
         {
-            context.Entry<Group>(t).State = EntityState.Modified;
+            //context.Entry<Group>(t).State = EntityState.Modified;
+            var group = context.Groups.Find(t.GroupId);
+            group.BasePrice = t.BasePrice;                 //потом подключить maper
+            group.CourseName = t.CourseName;
+            group.Commence = t.Commence;
         }
     }
 }

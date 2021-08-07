@@ -70,12 +70,17 @@ namespace WPF_lab10.BusinessLayer.Services
 
         public void RemoveStudentFromGroup(int groupId, int studentId)
         {
-            throw new NotImplementedException();
+            dataBase.Students.Delete(studentId);
+            dataBase.Save();
         }
 
-        public void UpdateGroup(GroupViewModel group)
+        public void UpdateGroup(GroupViewModel groupViewModel)
         {
-            throw new NotImplementedException();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<GroupViewModel, Group>());
+            var mapper = new Mapper(config);
+            Group group = mapper.Map<GroupViewModel, Group>(groupViewModel);
+            dataBase.Groups.Update(group);
+            dataBase.Save();
         }
     }
 }
